@@ -5,75 +5,63 @@
 	<style type="text/css">
 		body {
 			display: grid;
-			grid-template-rows:  10vh 75vh 50vh 6vh;
-			grid-template-columns: 200px 1fr;
+			grid-template-rows:  3em 85vh 6vh;
+			grid-template-columns: 15% 85%;
 			grid-template-areas: 
-			"header header"
+			"header nav"
 			"main main"
-			"aside article"
 			"footer footer";
 			}
-		aside, main{
-			/*height: 75vh;*/
-		}
 		header {
-			background-color: cyan;
 			grid-area: header;
+			background: linear-gradient(to bottom, #8860d0 0%, #5680e9 100%);
 		}
-		aside {
-			background-color: red;
-			grid-area: aside;
+		nav	{
+			grid-area: nav;
+			background: linear-gradient(to bottom, #8860d0 0%, #5680e9 100%);
 		}
-		aside a {
+		nav a {
+			float: left;
 			display: block;
-			width: 200px;
-			height: 9vh;
-			border: solid 1px grey;
-			background-color: powderblue;
+			color: white;
 			text-align: center;
+			text-decoration: none;
+			padding: 1em 1em;
+		}
+		nav a:hover {
+			background: linear-gradient(to bottom, #5ab9ea 0%, #5680e9 100%);
+			color: black;
+		}
+		#top-header {
+			display: inline-block;
+
 		}
 		main {
-			background-color: yellow;
 			grid-area: main;
 		}
-		article h3, article div {
-			text-align: center;
-		}
 		footer {
-			display: block;
-			background-color: powderblue;
 			grid-area: footer;
-			padding-top: 10px;
+			background: linear-gradient(to bottom, #000066 0%, #003366 100%);
+			color: white;
 			text-align: center;
-		}
-		nav {
-			background-color: blue;
-			grid-area: nav;
-		}
-		article {
-			background-color: green;
-			grid-area: article;
+			padding: 14px;
 		}
 	</style>
 </head>
 <body>
-	<header>LOGO or sumthing probably site name</header>
-	<aside>
-		<a href=""><h1>Home</h1></a>
-		<a href=""><h1>Corporal</h1></a>
-		<a href=""><h1>Formal</h1></a>
-		<a href=""><h1>Informal</h1></a>
-		<a href=""><h1>About</h1></a>
-	</aside>
-	<article>
-		<h3>Disc of the thing we do (TITLE) </h3>
-		<div> the disc </div>
-	</article>
+	<header>
+		test header
+	</header>
+	<nav>
+		<a href="">Home</a>
+		<a href="">E-card</a>
+		<a href="">About</a>
+	</nav>
 	<main>
-		<div>Image of the 3 e card template or sumthing</div>
+		
 	</main>
 	<footer>
-		@Copyright Ching Long Bing Bong
+		@Copyright Ching Chong LING LONG
 	</footer>
 </body>
 </html>
