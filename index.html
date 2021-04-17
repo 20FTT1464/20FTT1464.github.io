@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About Myself</title>
+	<title>Welcome!</title>
+	<style type="text/css">
+		body {
+			display: grid;
+			grid-template-rows: 10vh 10vh 75vh 50vh 10vh;
+			grid-template-columns: 200px 1fr;
+			grid-template-areas: 
+			"header header"
+			"nav nav"
+			"main main"
+			"aside article"
+			"footer footer";
+			}
+		aside, main{
+			/*height: 75vh;*/
+		}
+		header {
+			background-color: cyan;
+			grid-area: header;
+		}
+		aside {
+			background-color: red;
+			grid-area: aside;
+
+		}
+		main {
+			background-color: yellow;
+			grid-area: main;
+		}
+		footer {
+			background-color: powderblue;
+			grid-area: footer;
+		}
+		nav {
+			background-color: blue;
+			grid-area: nav;
+		}
+		article {
+			background-color: green;
+			grid-area: article;
+		}
+	</style>
 </head>
 <body>
-<p>Hello, I am <b>Alif</b>.</p>
-Im <b>18</b> <em>years old</em>.<br>
-lets go <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; home!</i>
-<p></p>
-<p>
-	&yen; 6 is &lt; &euro; 10
-</p>
-<pre>
-	Pen merah,
-	Pen biru,
-	You marah,
-	I love you.
-</pre>
-
+	<header>1</header>
+	<nav>6</nav>
+	<aside>2</aside>
+	<article> 5</article>
+	<main>3</main>
+	<footer>4</footer>
 </body>
 </html>
