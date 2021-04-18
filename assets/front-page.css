@@ -37,7 +37,6 @@ nav a:hover {
 main {
 	grid-area: main;
 	background-color: #84CEEB;
-	border: solid 1px #000000;
 	border-radius: 30px;
 }
 footer {
@@ -46,4 +45,5 @@ footer {
 	color: white;
 	text-align: center;
 	padding: 14px;
+	border-radius: 1px;
 }
