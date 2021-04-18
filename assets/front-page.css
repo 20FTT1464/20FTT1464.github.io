@@ -18,6 +18,7 @@ nav	{
 	/*top bar also*/
 	grid-area: nav;
 	background: linear-gradient(to bottom, #8860d0 0%, #5680e9 100%);
+	border-left: dotted 2px #ffffff;
 }
 nav a {
 	/*nav button*/
