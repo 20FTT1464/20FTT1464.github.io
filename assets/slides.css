@@ -16,6 +16,8 @@ img {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  padding-top: 2em;
+  border-radius: 20px;
 }
 
 /* Next & previous buttons */
@@ -61,6 +63,7 @@ img {
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
+  padding-top: 3em;
   position: absolute;
   top: 0;
 }
