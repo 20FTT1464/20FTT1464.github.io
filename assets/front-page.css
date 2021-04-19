@@ -13,12 +13,20 @@ header {
 	/*top bar*/
 	grid-area: header;
 	background: linear-gradient(to bottom, #8860d0 0%, #5680e9 100%);
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+header img {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 nav	{
 	/*top bar also*/
 	grid-area: nav;
 	background: linear-gradient(to bottom, #8860d0 0%, #5680e9 100%);
 	border-left: dotted 2px #ffffff;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 nav a {
 	/*nav button*/
