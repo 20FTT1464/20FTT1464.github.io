@@ -6,7 +6,7 @@ body {
 	"header nav nav nav nav"
 	"main main main main main"
 	"footer footer footer footer footer";
-	background-color: #84CEEB;
+	background: linear-gradient(to bottom, #ffffff 0%, #5680e9 100%);
 	grid-row-gap: 2px;
 	}
 header {
@@ -52,6 +52,7 @@ nav a:hover {
 }
 main {
 	grid-area: main;
+	background: linear-gradient(to bottom, #ffffff 90%, #808080 100%);
 }
 footer {
 	/*Copyright thing*/
