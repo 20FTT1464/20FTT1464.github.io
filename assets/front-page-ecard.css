@@ -1,9 +1,10 @@
 body {
 	display: grid;
-	grid-template-rows:  3em 85vh 6vh;
+	grid-template-rows:  3em 10vh 75vh 6vh;
 	grid-template-columns: 15% 10% 25% 25% 25%;
 	grid-template-areas: 
 	"header nav nav nav nav"
+	"main main main main main"
 	"main main main main main"
 	"footer footer footer footer footer";
 	background: linear-gradient(to bottom, #ffffff 0%, #5680e9 100%);
