@@ -1,11 +1,10 @@
 body {
 	display: grid;
-	grid-template-rows:  3em 10vh 75vh 6vh;
+	grid-template-rows:  3em 85vh 6vh;
 	grid-template-columns: 15% 10% 25% 25% 25%;
 	grid-template-areas: 
 	"header nav nav nav nav"
 	"main main main main main"
-	"div1 div1 div2 div3 div4"
 	"footer footer footer footer footer";
 	background: linear-gradient(to bottom, #ffffff 0%, #5680e9 100%);
 	grid-row-gap: 2px;
@@ -52,8 +51,13 @@ nav a:hover {
 }
 main {
 	grid-area: main;
-	background-color: red;
-	
+	background-color: mediumslateblue;
+	display: grid;
+	grid-template-rows: 5% 95%;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-areas: 
+	"dtop dtop dtop dtop"
+	"div1 div2 div3 div4";
 }
 footer {
 	/*Copyright thing*/
@@ -68,26 +72,33 @@ footer {
 	bottom: 0;
 	width: 100%;
 }
+#dtop {
+	grid-area: dtop;
+	background-color: #ffffff;
+	width: 100%;
+	padding-top: 5px;
+	background: linear-gradient(powderblue 0%, snow 50%, powderblue 100%);
+	border-radius: 5px;
+}
 #div1 {
 	grid-area: div1;
-	background-color: red;
 }
 #div2 {
 	grid-area: div2;
-	background-color: red;
 }
 #div3 {
 	grid-area: div3;
-	background-color: red;
-	position: fixed;
-	left: 0;
 }
 #div4 {
 	grid-area: div4;
-	background-color: red;
-	margin: left;
 }
+#div1, #div2, #div3, #div4 {
+	width: 100%;
+	background-color: #ffffff;
+	border: dashed 2px #000000;
+	border-radius: 30px;
+}
+
 div {
-	width: 96%;
-	padding-left: 2%;
+	text-align: center;
 }
