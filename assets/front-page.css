@@ -52,7 +52,7 @@ nav a:hover {
 }
 main {
 	grid-area: main;
-	background: linear-gradient(to bottom, #F5FFFA 90%, #808080 100%);
+	background: linear-gradient(to bottom, azure 90%, #808080 100%);
 }
 footer {
 	/*Copyright thing*/
