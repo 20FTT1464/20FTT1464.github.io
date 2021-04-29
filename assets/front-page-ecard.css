@@ -99,8 +99,66 @@ footer {
 	background: linear-gradient(to top, gray 0%, azure 15%);
 	border: dashed 2px #000000;
 	border-radius: 30px;
+	align-content: center;
 }
 
 div {
 	text-align: center;
+}
+#buttoni {
+	background: linear-gradient(to right, #8860d0 0%, #5680e9 100%);
+	height: 3em;
+	width: 25%;
+	border-radius: 14px;
+	color: snow;
+	padding-top: 0.1em;
+}
+#buttoni:hover {
+	background: linear-gradient(to right, #5ab9ea 0%, #5680e9 100%);
+	height: 3.2em;
+	width: 30%;
+}
+#buttonf {
+	background: linear-gradient(to right, #8860d0 0%, #5680e9 100%);
+	height: 3em;
+	width: 25%;
+	border-radius: 14px;
+	color: snow;
+	padding-top: 0.1em;
+}
+#buttonf:hover {
+	background: linear-gradient(to right, #5ab9ea 0%, #5680e9 100%);
+	height: 3.2em;
+	width: 30%;
+}
+#buttoncor {
+	background: linear-gradient(to right, #8860d0 0%, #5680e9 100%);
+	height: 3em;
+	width: 25%;
+	border-radius: 14px;
+	color: snow;
+	padding-top: 0.1em;
+}
+#buttoncor:hover {
+	background: linear-gradient(to right, #5ab9ea 0%, #5680e9 100%);
+	height: 3.2em;
+	width: 30%;
+}
+#buttoncus {
+	background: linear-gradient(to right, #8860d0 0%, #5680e9 100%);
+	height: 3em;
+	width: 25%;
+	border-radius: 14px;
+	color: snow;
+	padding-top: 0.1em;
+}
+#buttoncus:hover {
+	background: linear-gradient(to right, #5ab9ea 0%, #5680e9 100%);
+	height: 3.2em;
+	width: 30%;
+}
+p {
+	display: block;
+	width: 95%;
+	height: 75%;
 }
