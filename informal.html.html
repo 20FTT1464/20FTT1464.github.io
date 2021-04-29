@@ -7,6 +7,17 @@
 		main {
 			background-color: #84CEEB;
 			border-radius: 30px;
+			display: grid;
+			grid-template-columns: 15% 85%;
+			grid-template-areas: 
+			"dleft dright";
+
+		}
+		#dleft {
+			background-color: red;
+		}
+		#dright {
+			background-color: blue;
 		}
 	</style>
 </head>
@@ -21,7 +32,13 @@
 		<a href="">About</a> <!-- About the team and e-card -->
 	</nav>
 	<main>
-		
+		<div id="dleft">
+			
+		</div>
+
+		<div id="dright">
+			
+		</div>
 	</main>
 	<footer>
 		@Copyright Alif | Jimm | Amira
