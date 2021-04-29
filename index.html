@@ -6,8 +6,19 @@
 	<link rel="stylesheet" type="text/css" href="assets/slides.css">
 	<style type="text/css">
 		main {
-			background-color: #84CEEB;
+			background-color: #ffffff;
 			border-radius: 30px;
+		}
+		#buttoncontainer {
+			padding-top: 3em;
+			text-align: center;
+		}
+		#button1 {
+			background: linear-gradient(to right, #8860d0 0%, #5680e9 100%);
+			height: 3em;
+			width: 10%;
+			border-radius: 14px;
+			color: white;
 		}
 	</style>
 </head>
@@ -25,21 +36,27 @@
 		<div class="slideshow-container">
 
 		<div class="mySlides fade">
-		  <div class="numbertext">1 / 3</div>
-		  <img src="assets/images/ss1.jpg" class="imgassets">
+		  <div class="numbertext">1 / 4</div>
+		  <img src="assets/ss1.jpg" class="imgassets">
 		  <div class="text">test1</div>
 		</div>
 
 		<div class="mySlides fade">
-		  <div class="numbertext">2 / 3</div>
-		  <img src="assets/images/ss1.jpg" class="imgassets">
+		  <div class="numbertext">2 / 4</div>
+		  <img src="assets/ss1.jpg" class="imgassets">
 		  <div class="text">test2</div>
 		</div>
 
 		<div class="mySlides fade">
-		  <div class="numbertext">3 / 3</div>
-		  <img src="assets/images/ss1.jpg" class="imgassets">
+		  <div class="numbertext">3 / 4</div>
+		  <img src="assets/ss1.jpg" class="imgassets">
 		  <div class="text">test3</div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">4 / 4</div>
+		  <img src="assets/ss1.jpg" class="imgassets">
+		  <div class="text">test4</div>
 		</div>
 
 		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -49,13 +66,22 @@
 		<br>
 
 		<div style="text-align:center">
-		  <span class="dot" onclick="currentSlide(1)"></span> 
-		  <span class="dot" onclick="currentSlide(2)"></span> 
-		  <span class="dot" onclick="currentSlide(3)"></span> 
+		  <span class="si" onclick="currentSlide(1)"></span> 
+		  <span class="si" onclick="currentSlide(2)"></span> 
+		  <span class="si" onclick="currentSlide(3)"></span> 
+		  <span class="si" onclick="currentSlide(4)"></span> 
 		</div>
+
+		<div id="buttoncontainer">
+			<a href="e-card.html">
+				<button type="button" id="button1">Get Started Now!</button>
+			</a>
+		</div>
+
 	</main>
 	
 	<footer>
+		<!-- @Copyright Ching Chong Ling LOng -->
 		@Copyright Alif | Jimm | Amira
 	</footer>
 
@@ -74,17 +100,17 @@
 		function showSlides(n) {
 		  var i;
 		  var slides = document.getElementsByClassName("mySlides");
-		  var dots = document.getElementsByClassName("dot");
+		  var si = document.getElementsByClassName("si");
 		  if (n > slides.length) {slideIndex = 1}    
 		  if (n < 1) {slideIndex = slides.length}
 		  for (i = 0; i < slides.length; i++) {
 		      slides[i].style.display = "none";  
 		  }
-		  for (i = 0; i < dots.length; i++) {
-		      dots[i].className = dots[i].className.replace(" active", "");
+		  for (i = 0; i < si.length; i++) {
+		      si[i].className = si[i].className.replace(" active", "");
 		  }
 		  slides[slideIndex-1].style.display = "block";  
-		  dots[slideIndex-1].className += " active";
+		  si[slideIndex-1].className += " active";
 		}
 	</script>
 
