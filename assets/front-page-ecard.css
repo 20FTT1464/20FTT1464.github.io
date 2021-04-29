@@ -94,7 +94,8 @@ footer {
 	grid-area: div4;
 }
 #div1, #div2, #div3, #div4 {
-	width: 98%;
+	width: 96%;
+	height: 98%;
 	background-color: azure;
 	border: dashed 2px #000000;
 	border-radius: 30px;
