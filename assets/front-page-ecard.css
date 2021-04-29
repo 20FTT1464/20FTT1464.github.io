@@ -51,6 +51,7 @@ nav a:hover {
 }
 main {
 	grid-area: main;
+	width: 100%;
 	background-color: mediumslateblue;
 	display: grid;
 	grid-template-rows: 5% 95%;
@@ -93,7 +94,7 @@ footer {
 	grid-area: div4;
 }
 #div1, #div2, #div3, #div4 {
-	width: 100%;
+	width: 99%;
 	background-color: #ffffff;
 	border: dashed 2px #000000;
 	border-radius: 30px;
