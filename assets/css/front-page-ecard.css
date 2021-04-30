@@ -1,0 +1,164 @@
+body {
+	display: grid;
+	grid-template-rows:  3em 85vh 6vh;
+	grid-template-columns: 15% 10% 25% 25% 25%;
+	grid-template-areas: 
+	"header nav nav nav nav"
+	"main main main main main"
+	"footer footer footer footer footer";
+	background: linear-gradient(to bottom, #ffffff 0%, #5680e9 100%);
+	grid-row-gap: 2px;
+	margin: 0;
+	}
+header {
+	/*top bar*/
+	grid-area: header;
+	background: linear-gradient(to bottom, #8860d0 0%, #5680e9 100%);
+	border-bottom-left-radius: 5px;
+	opacity: 0.9;
+	}
+header img {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	opacity: 0.9;
+}
+nav	{
+	/*top bar also*/
+	grid-area: nav;
+	background: linear-gradient(to bottom, #8860d0 0%, #5680e9 100%);
+	border-left: dotted 2px #ffffff;
+	border-bottom-right-radius: 5px;
+	opacity: 0.9;
+}
+nav a {
+	/*nav button*/
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	padding: 1em 1em;
+}
+nav a:hover {
+	/*mouse hover on nav's button*/
+	background: linear-gradient(to bottom, #5ab9ea 0%, #5680e9 100%);
+	color: black;
+	border-radius: 30px 0px 30px 0px
+}
+#top-header {
+	display: inline-block;
+
+}
+main {
+	grid-area: main;
+	width: 100%;
+	background: linear-gradient(to bottom, mediumslateblue 0%, #5680e9 100%);
+	display: grid;
+	grid-template-rows: 5% 95%;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-areas: 
+	"dtop dtop dtop dtop"
+	"div1 div2 div3 div4";
+}
+footer {
+	/*Copyright thing*/
+	grid-area: footer;
+	background: linear-gradient(to bottom, #000066 0%, #003366 100%);
+	color: white;
+	text-align: center;
+	padding: 14px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+#dtop {
+	grid-area: dtop;
+	background-color: #ffffff;
+	width: 100%;
+	padding-top: 5px;
+	background: linear-gradient(powderblue 0%, snow 50%, powderblue 100%);
+	border-radius: 5px;
+}
+#div1 {
+	grid-area: div1;
+}
+#div2 {
+	grid-area: div2;
+}
+#div3 {
+	grid-area: div3;
+}
+#div4 {
+	grid-area: div4;
+}
+#div1, #div2, #div3, #div4 {
+	width: 96%;
+	height: 98%;
+	background: linear-gradient(to top, gray 0%, azure 15%);
+	border: dashed 2px #000000;
+	border-radius: 30px;
+	align-content: center;
+}
+
+div {
+	text-align: center;
+}
+#buttoni {
+	background: linear-gradient(to right, #8860d0 0%, #5680e9 100%);
+	height: 3em;
+	width: 25%;
+	border-radius: 14px;
+	color: snow;
+	padding-top: 0.1em;
+}
+#buttoni:hover {
+	background: linear-gradient(to right, #5ab9ea 0%, #5680e9 100%);
+	height: 3.2em;
+	width: 30%;
+}
+#buttonf {
+	background: linear-gradient(to right, #8860d0 0%, #5680e9 100%);
+	height: 3em;
+	width: 25%;
+	border-radius: 14px;
+	color: snow;
+	padding-top: 0.1em;
+}
+#buttonf:hover {
+	background: linear-gradient(to right, #5ab9ea 0%, #5680e9 100%);
+	height: 3.2em;
+	width: 30%;
+}
+#buttoncor {
+	background: linear-gradient(to right, #8860d0 0%, #5680e9 100%);
+	height: 3em;
+	width: 25%;
+	border-radius: 14px;
+	color: snow;
+	padding-top: 0.1em;
+}
+#buttoncor:hover {
+	background: linear-gradient(to right, #5ab9ea 0%, #5680e9 100%);
+	height: 3.2em;
+	width: 30%;
+}
+#buttoncus {
+	background: linear-gradient(to right, #8860d0 0%, #5680e9 100%);
+	height: 3em;
+	width: 25%;
+	border-radius: 14px;
+	color: snow;
+	padding-top: 0.1em;
+}
+#buttoncus:hover {
+	background: linear-gradient(to right, #5ab9ea 0%, #5680e9 100%);
+	height: 3.2em;
+	width: 30%;
+}
+p {
+	display: block;
+	width: 95%;
+	height: 75%;
+}
