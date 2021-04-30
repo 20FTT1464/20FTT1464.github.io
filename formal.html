@@ -3,16 +3,18 @@
 <head>
 	<title>Welcome!</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/front-page.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/ecardlayout.css">
 	<style type="text/css">
-		main {
-			background-color: #84CEEB;
-			border-radius: 30px;
+		#ecardcan {
+			background-color: blue;
+			position: relative;
+			top: 35%;
 		}
 	</style>
 </head>
 <body>
 	<header>
-		<img src="assets/logo.jpg"> <!-- change logo -->
+		<img src="assets/images/logo.jpg"> <!-- change logo -->
 	</header>
 	<nav>
 		<!-- Top Navigation - for navigating the page -->
@@ -21,7 +23,19 @@
 		<a href="">About</a> <!-- About the team and e-card -->
 	</nav>
 	<main>
-		
+		<div id="dmtop">
+			<a href="e-card.html">
+				<img id="back" src="assets/images/back.jpg">
+			</a>
+		</div>
+		<aside id="dmside">
+			
+		</aside>
+		<div id="dmc">
+			<canvas id="ecardcan">
+				
+			</canvas>
+		</div>
 	</main>
 	<footer>
 		@Copyright Alif | Jimm | Amira
