@@ -52,7 +52,7 @@ nav a:hover {
 main {
 	grid-area: main;
 	width: 100%;
-	background-color: mediumslateblue;
+	background: linear-gradient(to bottom, mediumslateblue 0%, #5680e9 100%);
 	display: grid;
 	grid-template-rows: 5% 95%;
 	grid-template-columns: 25% 25% 25% 25%;
