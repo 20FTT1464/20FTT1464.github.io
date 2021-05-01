@@ -15,11 +15,11 @@
 
 	        if(document.getElementById(data).id == 'img1'){             
 	 	    document.getElementById('ecardcan').style.background = "url('assets/images/img1.jpg')"; 
-	 	    document.getElementById('ecardcan').style.backgroundSize = "400px 600px"; 
+	 	    document.getElementById('ecardcan').style.backgroundSize = "400px 500px"; 
 	        }
 	        else if(document.getElementById(data).id == 'img2'){   
 	        document.getElementById('ecardcan').style.backgroundImage = "url('assets/images/img2.jpg')";
-	        document.getElementById('ecardcan').style.backgroundSize = "400px 600px";
+	        document.getElementById('ecardcan').style.backgroundSize = "400px 500px";
 	        }
 
 	    }
