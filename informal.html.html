@@ -14,12 +14,33 @@
 
 		}
 		#dleft {
-			background-color: red;
+			background-color: mediumslateblue;
 		}
 		#dright {
 			background-color: blue;
 		}
+
+
 	</style>
+	<script type="text/javascript">
+		function rememberMe(){
+			var name = document.getElementById("name");
+			var address = document.getElementById("address");
+			var date = document.getElementById("date");
+			var greetings = document.getElementById("greetings");
+
+
+			localStorage.setItem("name", name.value);
+			localStorage.setItem("address", address.value);
+			localStorage.setItem("date", date.value);
+			localStorage.setItem("greetings", greetings.value);
+			}
+		  
+
+
+
+			
+	</script>
 </head>
 <body>
 	
@@ -32,19 +53,42 @@
 		<a href="">E-card</a> <!-- go to e-card selection tab -->
 		<a href="">About</a> <!-- About the team and e-card -->
 	</nav>
-<<<<<<< HEAD
 	<main>
 		<div id="dleft">
+
+			<div>
+			<label for="name">Enter Fullname</label><br>
+			<input type="text" name="" id="name" placeholder="Your Name"><br>
+			</div>
+
+			<div>
+			<label for="address">Enter Address</label><br>
+			<textarea cols="30" rows="5" placeholder="Your Address" id="address"></textarea><br>
+			</div>
+
+			<div>
+			<label for="date">Enter Date</label><br>
+			<input type="date" name="" id="date" placeholder="Enter Date"><br>
+			</div>
 			
+			<div>
+		    <label for="greetings">Greetings Here!</label>
+			<textarea cols="30" rows="5" placeholder="Enter your greetings here!" id="greetings"></textarea>
+		    </div>
+		    <div>
+		    	<button onclick="">Submit </button>
+		    </div>
+			
+
+
+
+
+
 		</div>
 
 		<div id="dright">
 			
 		</div>
-=======
-	<main>	
->>>>>>> c532130afbc0ec296285a5cc62cdaed62935887a
-	</main>
 	<footer>
 		@Copyright Alif | Jimm | Amira
 	</footer>
