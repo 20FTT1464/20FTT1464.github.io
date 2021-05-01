@@ -30,8 +30,8 @@ main {
 	border-right: solid 1px #000000;
 }
 #ecardcan {
-	width: 300px;
-	height: 400px;
+	width: 400px;
+	height: 600px;
 	border: dashed 1px black;
 	position: relative;
 	top: 10%;
