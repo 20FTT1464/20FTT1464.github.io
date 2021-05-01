@@ -2,141 +2,46 @@
 <html>
 <head>
 	<title>Welcome!</title>
-	<link rel="stylesheet" type="text/css" href="assets/front-page.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/front-page.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/ecardlayout.css">	
 	<style type="text/css">
-		main {
-			background-color: #84CEEB;
-			border-radius: 30px;
-			display: grid;
-			grid-template-columns: 15% 85%;
-			grid-template-areas: 
-			"dleft dright";
-
-		}
-		#cardbox{
-			width: 490px;
-			height: 600px;
-			margin:10px;
-			padding: 10px;
-			border :1px solid black;
-			background-color: white;
-
-		}
-
-		#dleft {
-			background-color: mediumslateblue;
-		}
-		#dright {
-			background-color: blue;
-		}
-		#dndbox3{
-			border :1px solid black;
-			width: 100px;
-			height: 60px;
-			margin: 15px;
-			padding: 15px;
-
-		}
-		.dndbox1,.dndbox2,{
-			border :1px solid black;
-			width: 95px;
-			height: 40px;
-			margin: 10px;
-			padding: 10px;
-
-
-		}
-		
-
 
 	</style>
+
+	<script src="assets/js/textecard.js"></script>
 	<script type="text/javascript">
+			 	  function allowDrop(ev)
+	    {
+	    ev.preventDefault();
+	    }
 
-		
-		function rememberMe(){
-			var name = document.getElementById("name");
-			var address = document.getElementById("address");
-			var date = document.getElementById("date");
-			var greetings = document.getElementById("greetings");
+	    function drag(ev)
+	    {
+	    ev.dataTransfer.setData("Text",ev.target.id);
+	    }
 
+	 function drop(ev)
+	    {
+	        ev.preventDefault();
+	        var data=ev.dataTransfer.getData("Text");
 
-			localStorage.setItem("name", name.value);
-			localStorage.setItem("address", address.value);
-			localStorage.setItem("date", date.value);
-			localStorage.setItem("greetings", greetings.value);
-			}
+	        if(document.getElementById(data).id == 'img1'){             
+	 	    document.getElementById('ecardcan').style.background = "url('assets/images/img1.jpg')"; 
+	 	    document.getElementById('ecardcan').style.backgroundSize = "300px 400px"; 
+	        }
+	        else if(document.getElementById(data).id == 'img2'){   
+	        document.getElementById('ecardcan').style.backgroundImage = "url('assets/images/img2.jpg')";
+	        document.getElementById('ecardcan').style.backgroundSize = "300px 400px";
+	        }
 
-			function reveal(){
-			var name = document.getElementById("name");
-			var address = document.getElementById("address");
-			var date = document.getElementById("date");
-			var greetings = document.getElementById("greetings");
-
-
-			name.value = localStorage.getItem("name");
-			address.value = localStorage.getItem("address");
-			date.value = localStorage.getItem("date");
-			greetings.value = localStorage.greetings("greetings")
-			// alert("You have been revealed!");
-	}
-	function fillin(){
-			var name = document.getElementById("name");
-			var address = document.getElementById("address");
-			var date = document.getElementById("date");
-			var greetings = document.getElementById("greetings");
-
-			name.innerHTML = localStorage.getItem("name");
-			address.innerHTML= localStorage.getItem("address");
-			date.innerHTML = localStorage.getItem("date");
-			greetings.innerHTML = localStorage.getItem("greetings");
-
-	}
-
-	// Drag and Drop 
-
-	function allowDrop(ev) {
-		ev.preventDefault();
-	}
-	function drag(ev){
-		ev.dataTransfer.setData("text", ev.target.id);
-	}
-	function drop(ev){
-		ev.preventDefault();
-		var data = ev.dataTransfer.getData("text");
-
-	}
-
-	// Change Background Template 
-
-	function myFunction() {
-  document.getElementById("background1").style.backgroundImage = "";
-}
-function myFunction() {
-  document.getElementById("background2").style.backgroundImage = "";
-}
-function myFunction() {
-  document.getElementById("background3").style.backgroundImage = "";
-}
-function myFunction() {
-  document.getElementById("background4").style.backgroundImage = "";
-}
-
-
-
-
-
-
-		  
-
-
-
-			
+	    }
 	</script>
+
 </head>
 <body>
 	
 	<header>
-		<img src="assets/logo.jpg"> <!-- change logo -->
+		<img src="assets/images/logo.jpg"> <!-- change logo -->
 	</header>
 	<nav>
 		<!-- Top Navigation - for navigating the page -->
@@ -144,62 +49,56 @@ function myFunction() {
 		<a href="">E-card</a> <!-- go to e-card selection tab -->
 		<a href="">About</a> <!-- About the team and e-card -->
 	</nav>
+
+
 	<main>
-		<div id="dleft">
-
-			<div>
-			<label for="name">Enter Fullname</label><br>
-			<input type="text" name="" id="name" placeholder="Your Name"><br>
-			</div>
-
-			<div>
-			<label for="address">Enter Address</label><br>
-			<textarea cols="30" rows="5" placeholder="Your Address" id="address"></textarea><br>
-			</div>
-
-			<div>
-			<label for="date">Enter Date</label><br>
-			<input type="date" name="" id="date" placeholder="Enter Date"><br>
-			</div>
-			
-			<div>
-		    <label for="greetings">Greetings Here!</label>
-			<textarea cols="30" rows="5" placeholder="Enter your greetings here!" id="greetings"></textarea>
-		    </div>
-
-		    <div>
-		    	<button onclick="">Submit </button>
-		    </div>
-
-		    <div class="dndbox1" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>
-		    <div class="dndbox2" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>
-
-		   <div id="background1">
-		   	 <button type="button" onclick="myFunction()">Background 1</button>
-		   </div>
-		   <div id="background2">
-		   	<button type="button" onclick="myFunction()">Background 2</button>
-		   </div>
-		   <div id="background3">
-		   	<button type="button" onclick="myFunction()">Background 3</button>
-		   </div>
-		   <div id="background4">
-		   	<button type="button" onclick="myFunction()">Background 4</button>
-		   </div>
-
-			
-
-
-
-
-
+		<div id="dmtop">
+			<a href="e-card.html">
+				<img id="back" src="assets/images/back.jpg">
+			</a>
 		</div>
 
-		<div id="dright">
-			<div id="cardbox">
-				<div id="dndbox3" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>
+		<aside id="dmside">
+			<div id="dmsic">
+				<div>
+				<label for="name">Enter Fullname</label><br>
+				<input type="text" name="" id="name" placeholder="Your Name"><br>
+				</div>
 
+				<div>
+				<label for="address">Enter Address</label><br>
+				<textarea cols="30" rows="5" placeholder="Your Address" id="address"></textarea><br>
+				</div>
+
+				<div>
+				<label for="date">Enter Date</label><br>
+				<input type="date" name="" id="date" placeholder="Enter Date"><br>
+				</div>
+				
+				<div>
+			    <label for="greetings">Greetings Here!</label>
+				<textarea cols="30" rows="5" placeholder="Enter your greetings here!" id="greetings"></textarea>
+			    </div>
+
+			    <div>
+			    	<button onclick="">Submit </button>
+			    </div>
+
+			    <div id="bcon">
+			    	<img src="assets/images/img1.jpg" id="img1" draggable="true" ondragstart="drag(event)">
+			    	<img src="assets/images/img2.jpg" id="img2" draggable="true" ondragstart="drag(event)">
+			    </div>
 			</div>
+
+
+
+		</aside>
+
+		<div id="dmc">
+			<canvas id="ecardcan" ondrop="drop(event)" ondragover="allowDrop(event)">
+				
+			</canvas>
+		</div>
 					
 		
 		

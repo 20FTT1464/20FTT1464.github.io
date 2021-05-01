@@ -7,7 +7,6 @@ main {
 	grid-template-areas: 
 	"dmtop dmtop"
 	"dmside dmc"
-
 }
 #dmtop {
 	grid-area: dmtop;
@@ -22,8 +21,6 @@ main {
 #dmc {
 	grid-area: dmc;
 	text-align: center;
-	/*vertical-align: center;*/
-
 }
 #back {
 	height: 44px;
@@ -31,4 +28,22 @@ main {
 	padding-left: 20px;
 	padding-right: 10px;
 	border-right: solid 1px #000000;
+}
+#ecardcan {
+	width: 300px;
+	height: 400px;
+	border: dashed 1px black;
+	position: relative;
+	top: 10%;
+}
+#bcon {
+	padding-top: 10px;
+}
+#bcon img {
+	width: 120px;
+	height: 160px;
+}
+#dmsic {
+	padding-top: 20px;
+	padding-left: 20px;
 }
