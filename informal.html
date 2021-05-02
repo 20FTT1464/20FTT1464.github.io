@@ -5,61 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/front-page.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/ecardlayout.css">	
 	<style type="text/css">
-		#canwrite {
-			border: solid 1px black;
-		}
-		#sal {
-			padding-top: 1em;
-		}
-		#bcon {
-			padding-top: 10px;
-			height: 160px;
-			width: 270px;
-			overflow: scroll;
-		}
-		#bcon img {
-			width: 120px;
-			height: 160px;
-		}
-		.center {
-			text-align: center;
-		}
-		#cardtype {
-			text-align: center;
-			width: 100%;
-		}
-		#colorcon {
-			margin: auto;
-			height: 10px;
-			display: grid;
-			grid-template-rows: 10px;
-			grid-template-columns: 20px 20px 20px 20px 20px 20px 20px;
-			grid-template-areas: 
-			"r o y g b i v";
-			grid-column-gap: 10px;
-			padding-bottom: 1em;
-		}
-		#r {
-			grid-area: r;
-		}
-		#o {
-			grid-area: o;
-		}
-		#y {
-			grid-area: y;
-		}
-		#g {
-			grid-area: g;
-		}
-		#b {
-			grid-area: b;
-		}
-		#i {
-			grid-area: i;
-		}
-		#v {
-			grid-area: v;
-		}
 	</style>
 
 	<script src="assets/js/textecard.js"></script>
@@ -77,9 +22,9 @@
 	</header>
 	<nav>
 		<!-- Top Navigation - for navigating the page -->
-		<a href="">Home</a> <!-- go to home -->
-		<a href="">E-card</a> <!-- go to e-card selection tab -->
-		<a href="">About</a> <!-- About the team and e-card -->
+		<a href="index.html">Home</a> <!-- go to home -->
+		<a href="e-card.html">E-card</a> <!-- go to e-card selection tab -->
+		<a href="about.html">About</a> <!-- About the team and e-card -->
 	</nav>
 
 
@@ -130,7 +75,7 @@
 			    	<img src="assets/images/informal_1.png" id="img1" draggable="true" ondragstart="drag(event)">
 			    	<img src="assets/images/informal_2.png" id="img2" draggable="true" ondragstart="drag(event)">
 			    	<img src="assets/images/informal_3.png" id="img3" draggable="true" ondragstart="drag(event)">
-			    	<img src="assets/images/informal_4.jpg" id="img4" draggable="true" ondragstart="drag(event)">
+			    	<img src="assets/images/informal_4.png" id="img4" draggable="true" ondragstart="drag(event)">
 			    </div>
 			    <div id="sal">
 			    	<button onclick="save();">Save</button>

@@ -61,22 +61,63 @@ main {
 
 #r {
   background-color: red;
+  grid-area: r;
 }
 #o {
   background-color: orange;
+  grid-area: o;
 }
 #y {
   background-color: yellow;
+  grid-area: y;
 }
 #g {
   background-color: green;
+  grid-area: g;
 }
 #b {
   background-color: blue;
+  grid-area: b;
 }
 #i {
   background-color: indigo;
+  grid-area: i;
 }
 #v {
   background-color: violet;
+  grid-area: v;
+}
+#colorcon {
+	margin: auto;
+	height: 10px;
+	display: grid;
+	grid-template-rows: 10px;
+	grid-template-columns: 20px 20px 20px 20px 20px 20px 20px;
+	grid-template-areas: 
+	"r o y g b i v";
+	grid-column-gap: 10px;
+	padding-bottom: 1em;
+}
+#canwrite {
+	border: solid 1px black;
+}
+#sal {
+	padding-top: 1em;
+}
+#bcon {
+	padding-top: 10px;
+	height: 160px;
+	width: 270px;
+	overflow: scroll;
+}
+#bcon img {
+	width: 120px;
+	height: 160px;
+}
+.center {
+	text-align: center;
+}
+#cardtype {
+	text-align: center;
+	width: 100%;
 }

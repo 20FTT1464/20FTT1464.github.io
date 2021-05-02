@@ -26,7 +26,7 @@
 	        document.getElementById('ecardcan').style.backgroundSize = "400px 500px";
 	        }
 	        else if(document.getElementById(data).id == 'img4'){   
-	        document.getElementById('ecardcan').style.backgroundImage = "url('assets/images/informal_4.jpg')";
+	        document.getElementById('ecardcan').style.backgroundImage = "url('assets/images/informal_4.png')";
 	        document.getElementById('ecardcan').style.backgroundSize = "400px 500px";
 	        }
 	        else if(document.getElementById(data).id == 'r'){   
