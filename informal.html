@@ -5,7 +5,9 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/front-page.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/ecardlayout.css">	
 	<style type="text/css">
-
+		#canwrite {
+			border: solid 1px black;
+		}
 	</style>
 
 	<script src="assets/js/textecard.js"></script>
@@ -63,6 +65,10 @@
 			    	<button onclick="save();">Load</button>
 			    </div>
 
+			    <div>
+			    	<button onclick="ClearButton()">Clear text</button>
+			    </div>
+
 			    <div id="bcon">
 			    	<img src="assets/images/img1.jpg" id="img1" draggable="true" ondragstart="drag(event)">
 			    	<img src="assets/images/img2.jpg" id="img2" draggable="true" ondragstart="drag(event)">
@@ -74,11 +80,12 @@
 		</aside>
 
 		<div id="dmc">
-			<canvas id="ecardcan" ondrop="drop(event)" ondragover="allowDrop(event)">
-				
+			<canvas id="ecardcan" ondrop="drop(event)" ondragover="allowDrop(event)" width="400" height="500">
+					
 			</canvas>
-			<script src="assets/js/writer.js"></script>
+			
 		</div>
+		<script src="assets/js/writer.js"></script>
 					
 		
 		

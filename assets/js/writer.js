@@ -42,7 +42,7 @@ canvas.addEventListener("click", function (e) {
 	// Get clicked position to write text
 	mouseX = e.pageX - canvas.offsetLeft;
 	mouseY = e.pageY - canvas.offsetTop;
-	startingX = mousex;
+	startingX = mouseX;
 
 	// Restart recent words array
 	recentWords = [];
@@ -75,10 +75,14 @@ document.addEventListener("keydown", function (e) {
 	context.fillText(e.key, mouseX, mouseY);
 
 	// Move cursor forward after every key pressed
-	mouseX += cotext.measureText(e.key).width;
+	mouseX += context.measureText(e.key).width;
 
 	saveState();
 	recentWords.push(e.key);
 	}
 
 }, false);
+
+function ClearButton() {
+	context.clearRect ( 0, 0, canvas.width, canvas.height );
+}
