@@ -1,5 +1,5 @@
-var ecardcan = document.getElementById("ecardcan");
-var context = ecardcan.getContext("2d");
+var canvas = document.getElementById("ecardcan");
+var context = canvas.getContext("2d");
 
 //Variables t ostore mouse x and y positions
 var mouseX = 0;
@@ -14,7 +14,7 @@ var undoList = [];
 
 // A function to save canvas state after every key press
 function saveState() {
-	undoList.push(ecardcan.toDataURL());
+	undoList.push(canvas.toDataURL());
 }
 
 // By default, save the canvas state first
@@ -30,18 +30,18 @@ function undo() {
 	//Display old saved state
 	image.src = imgData;
 	image.onload = function () {
-		context.clearRect(0, 0, ecardcan.width, ecardcan.height);
-		context.drawImage(image, 0, 0, ecardcan.width, ecardcan.height, 0, 0, ecardcan.width, ecardcan.height);
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		context.drawImage(image, 0, 0, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
 
 	}
 
 }
 
 // A function called when mouse clicked on canvas
-ecardcan.addEventListener("click", function (e) {
+canvas.addEventListener("click", function (e) {
 	// Get clicked position to write text
-	mouseX = e.pageX - ecardcan.offsetLeft;
-	mouseY = e.pageY - ecardcan.offsetTop;
+	mouseX = e.pageX - canvas.offsetLeft;
+	mouseY = e.pageY - canvas.offsetTop;
 	startingX = mousex;
 
 	// Restart recent words array
