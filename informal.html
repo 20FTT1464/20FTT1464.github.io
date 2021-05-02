@@ -8,17 +8,62 @@
 		#canwrite {
 			border: solid 1px black;
 		}
+		#sal {
+			padding-top: 1em;
+		}
 		#bcon {
 			padding-top: 10px;
+			height: 160px;
+			width: 270px;
+			overflow: scroll;
 		}
 		#bcon img {
 			width: 120px;
 			height: 160px;
 		}
+		.center {
+			text-align: center;
+		}
+		#cardtype {
+			text-align: center;
+			width: 100%;
+		}
+		#colorcon {
+			margin: auto;
+			height: 10px;
+			display: grid;
+			grid-template-rows: 10px;
+			grid-template-columns: 20px 20px 20px 20px 20px 20px 20px;
+			grid-template-areas: 
+			"r o y g b i v";
+			grid-column-gap: 10px;
+			padding-bottom: 1em;
+		}
+		#r {
+			grid-area: r;
+		}
+		#o {
+			grid-area: o;
+		}
+		#y {
+			grid-area: y;
+		}
+		#g {
+			grid-area: g;
+		}
+		#b {
+			grid-area: b;
+		}
+		#i {
+			grid-area: i;
+		}
+		#v {
+			grid-area: v;
+		}
 	</style>
 
 	<script src="assets/js/textecard.js"></script>
-	<script src="assets/js/dndf.js"></script>
+	<script src="assets/js/dndf_informal.js"></script>
 	<script type="text/javascript">
 		
 	</script>
@@ -47,6 +92,7 @@
 
 		<aside id="dmside">
 			<div id="dmsic">
+				<div id="cardtype">Informal</div>
 				<div>
 				<label for="name">Enter Fullname</label><br>
 				<input type="text" name="" id="name" placeholder="Your Name"><br>
@@ -66,19 +112,33 @@
 			    <label for="greetings">Greetings Here!</label><br>
 				<textarea cols="30" rows="5" placeholder="Enter your greetings here!" id="greetings"></textarea>
 			    </div>
+			    <div>Background Styling</div>
 
-			    <div>
-			    	<button onclick="save();">Save</button>
-			    	<button onclick="save();">Load</button>
+			    <div id="colorcon">
+			    	<div class="color" id="r" draggable="true" ondragstart="drag(event)"></div>
+					<div class="color" id="o" draggable="true" ondragstart="drag(event)"></div>
+					<div class="color" id="y" draggable="true" ondragstart="drag(event)"></div>
+					<div class="color" id="g" draggable="true" ondragstart="drag(event)"></div>
+					<div class="color" id="b" draggable="true" ondragstart="drag(event)"></div>
+					<div class="color" id="i" draggable="true" ondragstart="drag(event)"></div>
+					<div class="color" id="v" draggable="true" ondragstart="drag(event)"></div>
 			    </div>
 
-			    <div>
-			    	<button onclick="ClearButton()">Clear text</button>
-			    </div>
+			    
 
 			    <div id="bcon">
-			    	<img src="assets/images/img1.jpg" id="img1" draggable="true" ondragstart="drag(event)">
-			    	<img src="assets/images/img2.jpg" id="img2" draggable="true" ondragstart="drag(event)">
+			    	<img src="assets/images/informal_1.png" id="img1" draggable="true" ondragstart="drag(event)">
+			    	<img src="assets/images/informal_2.png" id="img2" draggable="true" ondragstart="drag(event)">
+			    	<img src="assets/images/informal_3.png" id="img3" draggable="true" ondragstart="drag(event)">
+			    	<img src="assets/images/informal_4.jpg" id="img4" draggable="true" ondragstart="drag(event)">
+			    </div>
+			    <div id="sal">
+			    	<button onclick="save();">Save</button>
+			    	<button onclick="save();">Load</button>
+			    	<div id="ClearButtonflot">
+			    		<button onclick="Clearbg()">Clear Bg</button>
+			    		<button onclick="ClearButton()">Clear text</button>
+			    	</div>
 			    </div>
 			</div>
 

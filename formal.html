@@ -3,11 +3,40 @@
 <head>
 	<title>Welcome!</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/front-page.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/ecardlayout.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/ecardlayout.css">	
 	<style type="text/css">
+		#canwrite {
+			border: solid 1px black;
+		}
+		#bcon {
+			padding-top: 10px;
+			height: 160px;
+			width: 270px;
+			overflow: scroll;
+		}
+		#bcon img {
+			width: 120px;
+			height: 160px;
+		}
+		.center {
+			text-align: center;
+		}
+		#cardtype {
+			text-align: center;
+			width: 100%;
+		}
 	</style>
+
+	<script src="assets/js/textecard.js"></script>
+	<script src="assets/js/dndf_informal.js"></script>
+	<script type="text/javascript">
+		
+	</script>
+
+
 </head>
 <body>
+	
 	<header>
 		<img src="assets/images/logo.png"> <!-- change logo -->
 	</header>
@@ -17,23 +46,74 @@
 		<a href="">E-card</a> <!-- go to e-card selection tab -->
 		<a href="">About</a> <!-- About the team and e-card -->
 	</nav>
+
+
 	<main>
 		<div id="dmtop">
 			<a href="e-card.html">
 				<img id="back" src="assets/images/back.jpg">
 			</a>
 		</div>
+
 		<aside id="dmside">
-			
-		</aside>
-		<div id="dmc">
-			<canvas id="ecardcan">
+			<div id="dmsic">
+				<div id="cardtype">Informal</div>
+				<div>
+				<label for="name">Enter Fullname</label><br>
+				<input type="text" name="" id="name" placeholder="Your Name"><br>
+				</div>
+
+				<div>
+				<label for="address">Enter Address</label><br>
+				<textarea cols="30" rows="5" placeholder="Your Address" id="address"></textarea><br>
+				</div>
+
+				<div>
+				<label for="date">Enter Date</label><br>
+				<input type="date" name="" id="date" placeholder="Enter Date"><br>
+				</div>
 				
+				<div>
+			    <label for="greetings">Greetings Here!</label><br>
+				<textarea cols="30" rows="5" placeholder="Enter your greetings here!" id="greetings"></textarea>
+			    </div>
+
+			    
+
+			    
+
+			    <div id="bcon">
+			    	<img src="assets/images/informal_1.png" id="img1" draggable="true" ondragstart="drag(event)">
+			    	<img src="assets/images/informal_2.png" id="img2" draggable="true" ondragstart="drag(event)">
+			    	<img src="assets/images/informal_3.jpg" id="img3" draggable="true" ondragstart="drag(event)">
+			    	<img src="assets/images/informal_4.jpg" id="img4" draggable="true" ondragstart="drag(event)">
+			    </div>
+			    <div>
+			    	<button onclick="save();">Save</button>
+			    	<button onclick="save();">Load</button>
+			    	<div id="ClearButtonflot">
+			    		<button onclick="ClearButton()">Clear text</button>
+			    	</div>
+			    </div>
+			</div>
+
+
+
+		</aside>
+
+		<div id="dmc">
+			<canvas id="ecardcan" ondrop="drop(event)" ondragover="allowDrop(event)" width="400" height="500">
+					
 			</canvas>
+			
 		</div>
-	</main>
+		<script src="assets/js/writer.js"></script>
+					
+		
+		
 	<footer>
 		@Copyright Alif | Jimm | Amira
 	</footer>
+
 </body>
 </html>
