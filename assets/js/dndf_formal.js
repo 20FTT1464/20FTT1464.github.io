@@ -1,3 +1,57 @@
+	 	  function save(){
+	var name = document.getElementById("name");
+	var address = document.getElementById("address");
+	var date = document.getElementById("date");
+	var greetings = document.getElementById("greetings");
+	var colorcon = document.getElementById("colorcon");
+	var background = document.getElementById("bcon");
+
+	localStorage.setItem("name", name.value);
+	localStorage.setItem("address", address.value);
+	localStorage.setItem("date", date.value);
+	localStorage.setItem("greetings", greetings.value);
+	localStorage.setItem("colorcon", colorcon.value);
+	localStorage.setItem("bcon", bcon.value);
+
+}
+function load(){
+	var name = document.getElementById("name");
+	var address = document.getElementById("address");
+	var date = document.getElementById("date");
+	var greetings = document.getElementById("greetings");
+	var colorcon = document.getElementById("colorcon");
+	var background = document.getElementById("bcon");
+
+	name.value = localStorage.getItem("name");
+	address.value = localStorage.getItem("address");
+	date.value = localStorage.getItem("date");
+	greetings.value = localStorage.getItem("greetings");
+	colorcon.value = localStorage.getItem("colorcon");
+	background.value = localStorage.getItem("background");
+
+
+}
+function fillin(){
+	var name = document.getElementById("name");
+	var address = document.getElementById("address");
+	var date = document.getElementById("date");
+	var greetings = document.getElementById("greetings");
+	var colorcon = document.getElementById("colorcon");
+	var background = document.getElementById("bcon");
+
+	name.innerHTML = localStorage.getItem("name");
+	address.innerHTML = localStorage.getItem("address");
+	date.innerHTML = localStorage.getItem("date");
+	greetings.innerHTML = localStorage.getItem("greetings");
+	colorcon.innerHTML = localStorage.getItem("colorcon");
+	background.innerHTML = localStorage.getItem("bcon");
+
+
+
+
+
+}
+
 	 	  function allowDrop(ev)
 	    {
 	    ev.preventDefault();
