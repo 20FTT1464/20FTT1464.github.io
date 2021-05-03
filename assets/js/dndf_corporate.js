@@ -60,3 +60,4 @@
 	    	document.getElementById('ecardcan').style.background = "url('')"; 
 	 	    document.getElementById('ecardcan').style.backgroundSize = "400px 500px"; 
 	    }
+	    
