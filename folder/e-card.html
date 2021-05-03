@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome!</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/front-page-ecard.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/menucss.css">
+	<style type="text/css">
+		@media screen and (max-width: 600px) {
+			main {
+				grid-area: main;
+				width: 100%;
+				background: linear-gradient(to bottom, mediumslateblue 0%, #5680e9 100%);
+				display: grid;
+				grid-template-rows: 4% 48% 48% 48% 48%;
+				grid-template-columns: 100%;
+				grid-template-areas: 
+				"dtop"
+				"div1"
+				"div2"
+				"div3"
+				"div4";
+			}
+			p {
+				height: 40%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="assets/images/logo.png"> <!-- change logo -->
+	</header>
+	<nav>
+		<!-- Top Navigation - for navigating the page -->
+		<a href="index.html" id="home">Home</a> <!-- go to home -->
+		<a href=""  id="ecard">E-card</a> <!-- go to e-card selection tab -->
+		<a href="about.html"  id="about">About</a> <!-- About the team and e-card -->
+		<div id="menucon">
+		<img src="assets/images/menu.png" onclick="menu()" id="menuimg">
+		</div>
+	</nav>
+	<main id="main">
+		<div id="dtop">
+			Choose a Template
+		</div>
+
+		<div id="div1">
+			<h2>Informal</h2>
+			<p>
+				Design your own invitation card with these adorable styling. 
+				
+			</p>
+			<div class="buttoncontainer">
+				<a href="informal.html">
+					<button type="button" id="buttoni">Choose</button>
+				</a>
+			</div>
+		</div>
+
+		<div id="div2">
+			<h2>Formal</h2>
+			<p>
+				Here we have an invitation card for your eventful day!
+				
+			</p>
+			<div class="buttoncontainer">
+				<a href="formal.html">
+					<button type="button" id="buttonf">Choose</button>
+				</a>
+			</div>
+		</div>
+
+		<div id="div3">
+			<h2>Corporate</h2>
+			<p>
+				Create your invitation card to deliver to your 'Guest Of Honor'.  
+				
+			</p>
+			<div class="buttoncontainer">
+				<a href="corporate.html">
+					<button type="button" id="buttoncor">Choose</button>
+				</a>
+			</div>
+		</div>
+
+		<div id="div4">
+			<h2>Custom</h2>
+			<p>
+				Customise your card with your preferences. 
+
+			</p>
+			<div class="buttoncontainer">
+				<a href="custom.html">
+					<button type="button" id="buttoncus">Choose</button>
+				</a>
+			</div>
+		</div>
+
+		<script src="assets/js/menufunc.js"></script>
+	</main>
+	<footer>
+		<!-- @Copyright Ching Chong Ling LOng -->
+		@Copyright Alif | Jimm | Amira
+	</footer>
+</body>
+</html>
