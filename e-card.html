@@ -3,8 +3,27 @@
 <head>
 	<title>Welcome!</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/front-page-ecard.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/menucss.css">
 	<style type="text/css">
-		
+		@media screen and (max-width: 600px) {
+			main {
+				grid-area: main;
+				width: 100%;
+				background: linear-gradient(to bottom, mediumslateblue 0%, #5680e9 100%);
+				display: grid;
+				grid-template-rows: 4% 48% 48% 48% 48%;
+				grid-template-columns: 100%;
+				grid-template-areas: 
+				"dtop"
+				"div1"
+				"div2"
+				"div3"
+				"div4";
+			}
+			p {
+				height: 40%;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -13,9 +32,12 @@
 	</header>
 	<nav>
 		<!-- Top Navigation - for navigating the page -->
-		<a href="index.html">Home</a> <!-- go to home -->
-		<a href="">E-card</a> <!-- go to e-card selection tab -->
-		<a href="about.html">About</a> <!-- About the team and e-card -->
+		<a href="index.html" id="home">Home</a> <!-- go to home -->
+		<a href=""  id="ecard">E-card</a> <!-- go to e-card selection tab -->
+		<a href="about.html"  id="about">About</a> <!-- About the team and e-card -->
+		<div id="menucon">
+		<img src="assets/images/menu.png" onclick="menu()" id="menuimg">
+		</div>
 	</nav>
 	<main id="main">
 		<div id="dtop">
@@ -74,6 +96,7 @@
 			</div>
 		</div>
 
+		<script src="assets/js/menufunc.js"></script>
 	</main>
 	<footer>
 		<!-- @Copyright Ching Chong Ling LOng -->

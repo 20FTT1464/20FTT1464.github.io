@@ -3,6 +3,7 @@
 <head>
 	<title>Welcome!</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/front-page.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/menucss.css">
 	<style type="text/css">
 		main {
 			background-color: #84CEEB;
@@ -23,9 +24,12 @@
 	</header>
 	<nav>
 		<!-- Top Navigation - for navigating the page -->
-		<a href="index.html">Home</a> <!-- go to home -->
-		<a href="e-card.html">E-card</a> <!-- go to e-card selection tab -->
-		<a href="">About</a> <!-- About the team and e-card -->
+		<a href="" id="home">Home</a> <!-- go to home -->
+		<a href="e-card.html"  id="ecard">E-card</a> <!-- go to e-card selection tab -->
+		<a href="about.html"  id="about">About</a> <!-- About the team and e-card -->
+		<div id="menucon">
+		<img src="assets/images/menu.png" onclick="menu()" id="menuimg">
+		</div>
 	</nav>
 	<main>
 		<div>
@@ -39,5 +43,8 @@
 		<!-- @Copyright Ching Chong Ling LOng -->
 		@Copyright Alif | Jimm | Amira
 	</footer>
+
+	<script src="assets/js/menufunc.js"></script>
+
 </body>
 </html>
