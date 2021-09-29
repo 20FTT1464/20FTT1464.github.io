@@ -1,0 +1,86 @@
+[
+  {
+    "product_id": "PF0001",
+    "category": "perfume",
+    "product_title": "Sakura ADP",
+    "unit_price": 98.3,
+    "image": "/images/1.jpg"
+  },
+  {
+    "product_id": "PF0002",
+    "category": "perfume",
+    "product_title": "Galaxy Scent ADP",
+    "unit_price": 157.8,
+    "image": "/images/2.jpg"
+  },
+  {
+    "product_id": "PF0003",
+    "category": "perfume",
+    "product_title": "Eternal Love ADP",
+    "unit_price": 230.45,
+    "image": "/images/3.jpg"
+  },
+  {
+    "product_id": "PF0004",
+    "category": "perfume",
+    "product_title": "Love Portion ADP",
+    "unit_price": 546.3,
+    "image": "/images/4.jpg"
+  },
+  {
+    "product_id": "AC0001",
+    "category": "Accessories",
+    "product_title": "IR Magnetic Braclet",
+    "unit_price": 109.5,
+    "image": "/images/5.jpg"
+  },
+  {
+    "product_id": "AC0002",
+    "category": "Accessories",
+    "product_title": "Moonlight Couple Ring set",
+    "unit_price": 355.7,
+    "image": "/images/6.jpg"
+  },
+  {
+    "product_id": "AC0003",
+    "category": "Accessories",
+    "product_title": "Siberian Leather Belt",
+    "unit_price": 98.7,
+    "image": "/images/7.jpg"
+  },
+  {
+    "product_id": "AC0004",
+    "category": "Accessories",
+    "product_title": "Dreamcatcher earring",
+    "unit_price": 199.2,
+    "image": "/images/8.jpg"
+  },
+  {
+    "product_id": "FW0001",
+    "category": "Footwear",
+    "product_title": "Smart shoes",
+    "unit_price": 300.7,
+    "image": "/images/9.jpg"
+  },
+  {
+    "product_id": "FW0002",
+    "category": "Footwear",
+    "product_title": "Heels of the Devil",
+    "unit_price": 145.5,
+    "image": "/images/10.jpg"
+  },
+  {
+    "product_id": "FW0003",
+    "category": "Footwear",
+    "product_title": "Super Comfy",
+    "unit_price": 210.8,
+    "image": "/images/11.jpg"
+  },
+  {
+    "product_id": "FW0004",
+    "category": "Footwear",
+    "product_title": "Minimalist Leather Sandal",
+    "unit_price": 89.7,
+    "image": "/images/12.jpg"
+  }
+]

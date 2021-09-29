@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+	<input id="unid" type="username" name="username">
+	<input id="pwid" type="password" name="password">
+	<script type="text/javascript" src="assets/json/test.json">
+	</script>
+	<script type="text/javascript">
+		fetch('file.json')
+		  .then(response => response.json())
+		  .then(jsonResponse => console.log(jsonResponse))  
+		var un ;
+		var pw ;
+	</script>
+</body>
+</html>
