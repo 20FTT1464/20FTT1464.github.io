@@ -5,17 +5,96 @@
 	<title></title>
 </head>
 <body>
+	<div>
 
-	<input id="unid" type="username" name="username">
-	<input id="pwid" type="password" name="password">
-	<script type="text/javascript" src="assets/json/test.json">
+		<label>Username</label>
+			<input type="username" name="username">
+		<br>
+		<!-- ----------------------------------------------------- -->
+		<label>password</label>
+			<input type="password" name="password">
+		<br>
+
+		<button>login</button>
+		<button>clear</button>
+		<br>
+		<a href="/create-new-account">Create New Account</a>
+
+	</div>
+
+	<script src="assets/js/md5.js"></script>
+		<script src="assets/json/members_details.json"></script>
+		<script src="assets/json/usercont.json"></script>
+		<script type="text/javascript">
+			var uinput = document.getElementsByTagName("input");
+			var btn = document.getElementsByTagName("button");
+				var btnlogin = btn[0];
+
+			btnlogin.addEventListener("click", funcLogin);
+
+			var valid = false;
+			function funcLogin(){
+				var un = uinput[0].value;
+				var pw = uinput[1].value;
+
+				//password hash moment
+				var pwhash = hex_md5(pw);
+				var ucont = JSON.parse(usercont);
+
+				console.log(un);
+				console.log(pw);
+				console.log(pwhash);
+
+				var uparray = [{username : un, password : pwhash}];
+				console.log(uparray[0].username);
+				console.log(ucont[1].username);
+
+				//check if match
+				for(var i = 0; i<ucont.length; i++){
+					if(uparray[0].username == ucont[i].username && uparray[0].password == ucont[i].password){
+						console.log("yes");
+						valid = true;
+					} else {
+						console.log("sus");
+					}
+				}
+
+				//if match else not is scoom
+				if(valid == true){
+					console.log("successful");
+					alert("Login successful");
+					location.href = "home.html";
+				} else {
+					alert("Wrong Username/Password");
+				}
+
+
+			}
+
 	</script>
+
+	<div>
+		<p>Core 1 Q2</p>
+
+		<button>calculate</button>
+	</div>
+
+	<script src="assets/json/purchases.json"></script>
+	<script src="assets/json/product_details.json"></script>
 	<script type="text/javascript">
-		fetch('/assets/json/test.json')
-		  .then(response => response.json())
-		  .then(jsonResponse => console.log(jsonResponse))  
-		var un ;
-		var pw ;
+		var purchase = JSON.parse(purchaselog);
+
+		var test1 = [];
+		test1 = purchase.filter(purchase => purchase.member_id === "G0001");
+		
+		
+		console.table(purchase);
+		console.table(test1);
+		console.table(deez);
+
+
 	</script>
+
+
 </body>
 </html>
