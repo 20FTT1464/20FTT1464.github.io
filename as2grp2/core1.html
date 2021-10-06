@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		table{
+			width: 555px ;
+					}
+
+		th{
+			text-align: left;
+		}
+
+		table, th, td, caption{
+			border: 1px solid#000;
+			border-collapse: collapse;
+
+		}
+		th, td{
+			padding: 10px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div>
+
+		<label>Username</label>
+			<input type="username" name="username">
+		<br>
+		<!-- ----------------------------------------------------- -->
+		<label>password</label>
+			<input type="password" name="password">
+		<br>
+
+		<button>login</button>
+		<button>clear</button>
+		<br>
+		<a href="/create-new-account">Create New Account</a>
+
+
+	</div>
+
+	<script src="assets/js/md5.js"></script>
+		<script src="assets/json/members_details.json"></script>
+		<script src="assets/json/usercont.json"></script>
+		<script type="text/javascript"> 
+		// core1 f1
+			var member = JSON.parse(memded);
+
+			var uinput = document.getElementsByTagName("input");
+			var btn = document.getElementsByTagName("button");
+				var btnlogin = btn[0];
+
+			btnlogin.addEventListener("click", funcLogin);
+
+			var valid = false;
+			function funcLogin(){
+				var un = uinput[0].value;
+				var pw = uinput[1].value;
+
+				var pwhash = hex_md5(pw);
+				var ucont = JSON.parse(usercont);
+
+				
+				
+				
+
+				var uparray = [{username : un, password : pwhash}];
+				
+				
+
+				for(var i = 0; i<ucont.length; i++){
+					if(uparray[0].username == ucont[i].username && uparray[0].password == ucont[i].password){
+						
+						valid = true;
+					} else {
+						
+					}
+				}
+
+				if(valid == true){
+					
+					alert("Login successful");
+					location.href = "home.html";
+				} else {
+					alert("Wrong Username/Password");
+				}
+
+
+			}
+
+	</script>
+
+	<div>
+		<p>Core 1 Q2</p>
+
+		<button id="docal">calculate</button>
+		<button id="isum">item summary</button>
+	</div>
+
+		<table id="tabal2" style="text-align: center;">
+
+		</table>
+
+	<script src="assets/json/purchases-v1.json"></script>
+	<script src="assets/json/product_details.json"></script>
+	<script type="text/javascript">
+
+		var purchase = JSON.parse(purchaselog);
+		var pd = JSON.parse(pdetails);
+		
+		
+		// find cost of total cost of item per purchase qty*cost
+
+		var calculatebtn = document.getElementById("docal");
+
+		calculatebtn.addEventListener("click", doCalculate);
+
+
+		function doCalculate(){
+			var b = [];
+		purchase.forEach(function(element){
+			b.push(element.item);
+		})
+		var bstring = new Set(b);
+		var uitem = [...bstring];
+		
+
+
+		
+		var pdmoni = pd.map(function(element){
+   			return{
+	   			item: element.product_id,
+	   			price: element.unit_price
+	   		};
+	   	});
+	   	
+
+		var newpa = [];
+
+		purchase.forEach(function(value1){
+			pd.forEach(function(value2){
+				if(value1.item == value2.product_id){
+					newpa.push({
+						"member_id": value1.member_id, 
+						"item": value1.item,
+						"quantity": value1.quantity,
+						"total_price": value2.unit_price*value1.quantity 
+					});
+				}
+			});
+		});
+
+
+
+
+		
+
+		
+		var sortednp = newpa.sort((a, b) => (a.member_id > b.member_id) ? 1 : -1);
+
+		
+
+		var memandmon = sortednp.map(function(element){
+			return{
+				member_id: element.member_id,
+				total_price: element.total_price
+			}
+		});
+		
+		
+
+		
+
+		var final3 = [];
+		
+		member.forEach(function(element){
+			var summpri = 0;
+			for(var i = 0; i<memandmon.length; i++){
+				if(element.member_id == memandmon[i].member_id){
+					summpri += memandmon[i].total_price;
+				}
+			}
+			final3.push({
+							first_name: element.firstname,
+							last_name: element.lastname,
+							member_id: element.member_id,
+							total_price: parseFloat(summpri.toFixed(2))
+			});
+		})
+
+		
+		
+
+		
+		final4 = final3.map(function(element){
+			var silverm = parseInt((parseInt((element.total_price/100))*10));
+			var goldm = parseInt((parseInt((element.total_price/100))*15));
+			var Platinum = parseInt((parseInt((element.total_price/100))*20));
+
+			var initial = (element.member_id).charAt(0);
+			var mformula = initial == "S" ? "Silver" : initial == "G" ? "Gold" : initial == "P" ? "Platinum" : "";
+			var pformula = initial == "S" ? silverm : initial == "G" ? goldm : initial == "P" ? Platinum : "";
+
+			// if(initial == "S"){
+			// 	"Silver"
+			// } else if(initial == "G"){
+			// 	"Gold"
+			// } else if(initial == "P"){
+			// 	"Platinum"
+			// };
+
+
+			// if(initial == "S"){
+			// 	silverm
+			// } else if(initial == "G"){
+			// 	goldm
+			// } else if(initial == "P"){
+			// 	Platinum
+			// };
+
+			return{
+				...element,
+				membership: mformula,
+				points:	pformula
+			}
+		})
+
+		
+
+		
+
+		var bilpls = 0;
+		var tabal2 = document.getElementById("tabal2");
+		tabal2.innerHTML = "";
+
+		var hrow = document.createElement("tr");
+		var oth1 = document.createElement("th");
+		var oth2 = document.createElement("th");
+		var oth3 = document.createElement("th");
+		var oth4 = document.createElement("th");
+		var oth5 = document.createElement("th");
+		var oth6 = document.createElement("th");
+		var oth7 = document.createElement("th");
+		var oth8 = document.createElement("th");
+		var otht1 = document.createTextNode("bil");
+		var otht2 = document.createTextNode("first name");
+		var otht3 = document.createTextNode("last name");
+		var otht4 = document.createTextNode("member id");
+		var otht5 = document.createTextNode("total purchase cost");
+		var otht6 = document.createTextNode("membership");
+		var otht7 = document.createTextNode("points");
+
+		tabal2.appendChild(hrow);
+
+		hrow.appendChild(oth1);
+		oth1.appendChild(otht1);
+
+		hrow.appendChild(oth2);
+		oth2.appendChild(otht2);
+
+		hrow.appendChild(oth3);
+		oth3.appendChild(otht3);
+
+		hrow.appendChild(oth4);
+		oth4.appendChild(otht4);
+
+		hrow.appendChild(oth5);
+		oth5.appendChild(otht5);
+
+		hrow.appendChild(oth6);
+		oth6.appendChild(otht6);
+
+		hrow.appendChild(oth7);
+		oth7.appendChild(otht7);
+
+		final4.forEach(function(element){
+			bilpls++
+			var otr = document.createElement("tr");
+			var otd0 = document.createElement("td");
+			var otd1 = document.createElement("td");
+			var otd2 = document.createElement("td");
+			var otd3 = document.createElement("td");
+			var otd4 = document.createElement("td");
+			var otd5 = document.createElement("td");
+			var otd6 = document.createElement("td");
+			var otd7 = document.createElement("td");
+
+			var obilmomentpls = document.createTextNode(bilpls);
+			var ofirstname = document.createTextNode(element.first_name);
+			var olastname = document.createTextNode(element.last_name);
+			var omid = document.createTextNode(element.member_id);
+			var otp = document.createTextNode("$ "+element.total_price.toFixed(2));
+			var os = document.createTextNode(element.membership);
+			var og = document.createTextNode(element.points);
+
+
+			tabal2.appendChild(otr);
+
+			otr.appendChild(otd0);
+			otd0.appendChild(obilmomentpls);
+
+			otr.appendChild(otd1);
+			otd1.appendChild(ofirstname);
+
+			otr.appendChild(otd2);
+			otd2.appendChild(olastname);
+
+			otr.appendChild(otd3);
+			otd3.appendChild(omid);
+
+			otr.appendChild(otd4);
+			otd4.appendChild(otp);
+
+			otr.appendChild(otd5);
+			otd5.appendChild(os);
+
+			otr.appendChild(otd6);
+			otd6.appendChild(og);
+		});
+		}
+
+	</script>
+			
+
+
+	</table>
+
+	<script type="text/javascript">
+		// core 1 q3
+		var product = JSON.parse(pdetails);
+		
+		var isumbtn = document.getElementById("isum");
+		isumbtn.addEventListener("click", amongus);
+
+		function amongus(){
+		var tabal = document.getElementById("tabal2");
+		tabal2.innerHTML = "";
+
+		product.forEach(function(value1){
+
+			var tr = document.createElement("tr");
+			var th0 = document.createElement("th");
+			var th1 = document.createElement("th");
+
+			var pdi = document.createTextNode(value1.product_id);
+			var pdt = document.createTextNode(value1.product_title);
+
+			tabal.appendChild(tr);
+
+			tr.appendChild(th0);
+			th0.appendChild(pdi);
+
+			tr.appendChild(th1);
+			th1.appendChild(pdt);
+
+
+			purchase.forEach(function(value2){
+
+				if(value1.product_id == value2.item){
+
+					var tr1 = document.createElement("tr");
+
+					var td2 = document.createElement("td");
+					var td3 = document.createElement("td");
+
+					var pcd = document.createTextNode(value2.purchase_date);
+					var qty = document.createTextNode(value2.quantity);
+
+					tabal.appendChild(tr1);
+
+					tr1.appendChild(td2);
+					td2.appendChild(pcd);
+
+					tr1.appendChild(td3);
+					td3.appendChild(qty);
+
+				} else {}
+
+			});
+
+			var totalqty = 0;
+			for(var i = 0; i<purchase.length; i++){
+				if(value1.product_id == purchase[i].item){
+
+					totalqty += purchase[i].quantity;
+				}
+			}
+
+			var tr2 = document.createElement("tr");
+
+					var td4 = document.createElement("td");
+					var td5 = document.createElement("td");
+
+					var pcd = document.createTextNode("total quantity");
+					var qty = document.createTextNode(totalqty);
+
+					tabal.appendChild(tr2);
+
+					tr2.appendChild(td4);
+					td4.appendChild(pcd);
+
+					tr2.appendChild(td5);
+					td5.appendChild(qty);
+
+		});
+
+	}
+	</script>
+
+</body>
+</html>
