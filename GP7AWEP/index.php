@@ -1,3 +1,8 @@
-<?php
-    test
-?>
+<!DOCTYPE html>
+<html>
+    <body>
+        <?php
+        
+        ?>
+    </body>
+</html>
