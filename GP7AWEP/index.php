@@ -6,7 +6,8 @@
 
     <body>
         <div class="container">
-            <img src="" alt="">
+            <img src="assets/img/logo.png" height="100" id="img">
+            <br>
             <button href="/">Choose Room</button>
             <br>
             <button href="/">Check In</button>
