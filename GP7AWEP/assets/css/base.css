@@ -1,0 +1,24 @@
+body {
+    background-color: #6f849c;
+}
+.container {
+    background-color: #fff;
+    border: solid 1px gray;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 10%;
+}
+button {
+    margin : auto;
+    width: 40%;
+    height: 3em;
+    background-color: #e35760;
+    border: solid 5px #bd0d22;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: white;
+    font-size: 1.2em;
+}
