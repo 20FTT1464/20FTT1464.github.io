@@ -1,40 +1,24 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
- 
-=======
     <head>
         <link rel="stylesheet" href="assets/css/base.css"></link>
         <style>
             .container {
-                display: flex;
+                padding-top: 10px !important;
                 overflow: auto;
+                height: 480px;
             }
-            .sub-con {
+            .flexrow {
+                display: flex;
+            }
+            .flexcol {
                 width: 40%;
-                height: 40%;
+                background-color: red;
                 margin: auto;
+                margin-bottom: 50px;
                 margin-left: 5%;
-            }
-
-            #roomone {
-                background-color:blue;
-                flex-direction: row;
-                width: 50%;
-            }
-            #roomtwo {
-                background-color: yellow;
-                flex-direction: column;
-                flex-basis: 50%;
-            }
-            #roomthree {
-                
-            }
-            #roomfour {
-                
-            }
-            #roomfive {
-                
+                margin-right: 5%;
+                height: 150px;
             }
         </style>
     </head>
@@ -42,13 +26,18 @@
     <body>
         <div class="top-container"><b>Choose Room</b> > Book Form > Finished </div>
         <div class="container">
-            <div id="roomone" class="sub-con">Room 1</div>
-            <div id="roomtwo" class="sub-con">Room 2</div>
-            <div id="roomthree" class="sub-con">Room 3</div>
-            <div id="roomfour" class="sub-con">Room 4</div>
-            <div id="roomfive" class="sub-con">Room 5</div>
-            <div id="roomsix" class="sub-con">Room 6</div>
+            <div class="flexrow">
+                <div class="flexcol">test</div>
+                <div class="flexcol"></div>
+            </div>
+            <div class="flexrow">
+                <div class="flexcol">test</div>
+                <div class="flexcol">test</div>
+            </div>
+            <div class="flexrow">
+                <div class="flexcol">test</div>
+                <div class="flexcol">test</div>
+            </div>
         </div>
     </body>
->>>>>>> parent of 9a4362c (choose-room update)
 </html>
