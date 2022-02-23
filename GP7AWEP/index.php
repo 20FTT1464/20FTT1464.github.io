@@ -8,9 +8,9 @@
         <div class="container">
             <img src="assets/img/logo.png" height="100" id="img">
             <br>
-            <button href="/">Choose Room</button>
+            <a href="./choose-room.php"><button type="button">Choose Room</button></a>
             <br>
-            <button href="/">Check In</button>
+            <button type="button">Check In</button>
             <div>
                 Please start by choosing rooms
             </div>
