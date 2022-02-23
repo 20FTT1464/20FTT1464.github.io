@@ -34,7 +34,7 @@
             <?php
                 if(isset($_POST['snumset'])) {
                     
-                } else {
+                } else { //sheeesh allows to get opposite of isset aka isnotset
                     echo 
                     '<form method="post" action="book.php">
                         <h3>How many student?</h3>
@@ -52,10 +52,17 @@
                     <?php
                         if(isset($_POST['snumset'])) {
                             $studentno = $_POST['studentno'];
+                            echo 
+                            '<form method="post" action="book.php">
+                                <input type="submit" value="Back">
+                            </form>'; #ayy first try cheese
+                            // line 56 - 58 refreshes the page, allow to change no of student id
+
                             echo '<form method="post" action="confirmation.php">';
                             echo "<h3>Please fill in your student ids</h3>";
 
-                            switch ($studentno) {
+                            //show the amount of student id based of the chosen value
+                            switch ($studentno) { 
                                 case '3':
                                     echo "<label for='si1'>Student id 1: </label>";
                                     echo "<input type='text' id='si1' name='studentid1'><br><br>";
