@@ -31,7 +31,7 @@
                     ";
                 }
             ?>
-            <a href="index.php"><button type="button">Choose Room</button></a>
+            <a href="index.php"><button type="button">Homepage</button></a>
         </div>
     </body>
 </html>
