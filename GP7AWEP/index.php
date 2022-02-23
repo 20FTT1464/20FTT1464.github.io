@@ -11,6 +11,9 @@
             <button href="/">Choose Room</button>
             <br>
             <button href="/">Check In</button>
+            <div>
+                Please start by choosing rooms
+            </div>
         </div>
     </body>
 </html>

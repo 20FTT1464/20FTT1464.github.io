@@ -8,7 +8,9 @@ body {
     margin: auto;
     text-align: center;
     border-radius: 15px;
-    margin-top: 10%;
+    margin-top: 6%;
+    height: 400px;
+    padding-top:100px;
 }
 button {
     margin : auto;
@@ -23,5 +25,5 @@ button {
     font-size: 1.2em;
 }
 #img {
-    
+    margin-bottom: 50px;
 }
