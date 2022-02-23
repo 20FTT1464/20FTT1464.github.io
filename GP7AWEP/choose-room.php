@@ -39,12 +39,31 @@
     <body>
         <div class="top-container"><b>Choose Room</b> > Book Form > Finished </div>
         <div class="container">
-            <div id="roomone" class="sub-con">Room 1</div>
-            <div id="roomtwo" class="sub-con">Room 2</div>
-            <div id="roomthree" class="sub-con">Room 3</div>
-            <div id="roomfour" class="sub-con">Room 4</div>
-            <div id="roomfive" class="sub-con">Room 5</div>
-            <div id="roomsix" class="sub-con">Room 6</div>
+            <div id="roomone" class="sub-con">
+                <label>Room 1</label>
+                <input type="radio">
+
+            </div>
+            <div id="roomtwo" class="sub-con">
+                <label>Room 2</label>
+
+            </div>
+            <div id="roomthree" class="sub-con">
+                <label>Room 3</label>
+
+            </div>
+            <div id="roomfour" class="sub-con">
+                <label>Room 4</label>
+
+            </div>
+            <div id="roomfive" class="sub-con">
+                <label>Room 5</label>
+
+            </div>
+            <div id="roomsix" class="sub-con">
+                <label>Room 6</label>
+            
+            </div>
         </div>
     </body>
 </html>
