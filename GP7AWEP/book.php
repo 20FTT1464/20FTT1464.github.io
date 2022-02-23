@@ -20,7 +20,7 @@
                 background-color: #e35760;
                 border: solid 5px #bd0d22;
                 border-radius: 10px;
-                margin-top: 5%;
+                margin-top: 18%;
                 color: white;
                 font-size: 1.2em;
             }
@@ -31,20 +31,28 @@
         <div class="top-container">Choose Room > <b>Book Form</b> > Finished </div>
         <div class="container">
             <div id="formwrapper">
-                <form method="post" action="book.php">
-                    <h3>How many student?</h3>
-                    <select name="studentno" id="snum">
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <input type="submit" name="snumset" value="set">
-                </form>
+            <?php
+                if(isset($_POST['snumset'])) {
+                    
+                } else {
+                    echo 
+                    '<form method="post" action="book.php">
+                        <h3>How many student?</h3>
+                        <select name="studentno" id="snum">
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <input type="submit" name="snumset" value="set">
+                    </form>';
+                }
+            ?>
+                
 
                     <?php
                         if(isset($_POST['snumset'])) {
                             $studentno = $_POST['studentno'];
-
+                            echo '<form method="post" action="confirmation.php">';
                             echo "<h3>Please fill in your student ids</h3>";
 
                             switch ($studentno) {
@@ -86,6 +94,7 @@
                             }
 
                             echo '<input type="submit" name="snumset" value="submit" id="sbutton">';
+                            echo '</form>';
                         }
                     ?>
 
