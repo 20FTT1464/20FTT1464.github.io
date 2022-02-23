@@ -41,7 +41,7 @@
         <div class="container">
             <div id="roomone" class="sub-con">
                 <label>Room 1</label>
-                <input type="radio">
+                <input type="radio" id value="8am-9am">8am-9am 
 
             </div>
             <div id="roomtwo" class="sub-con">
