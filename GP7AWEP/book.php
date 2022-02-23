@@ -30,6 +30,23 @@
     <body>
         <div class="top-container">Choose Room > <b>Book Form</b> > Finished </div>
         <div class="container">
+            <div style="margin: auto;">
+                <?php
+                    if(isset($_POST['submitone'])) {
+                        echo '<h1>Room 1</h1>';
+                    } else if(isset($_POST['submittwo'])) {
+                        echo '<h1>Room 2</h1>';                                                       
+                    } else if(isset($_POST['submitthree'])) {
+                        echo '<h1>Room 3</h1>';               
+                    } else if(isset($_POST['submitfour'])) {
+                        echo '<h1>Room 4</h1>';             
+                    } else if(isset($_POST['submitfive'])) {
+                        echo '<h1>Room 5</h1>';              
+                    } else if(isset($_POST['submitsix'])) {
+                        echo '<h1>Room 6</h1>';             
+                    }
+                ?>
+            </div>
             <div id="formwrapper">
             <?php
                 if(isset($_POST['snumset'])) {
