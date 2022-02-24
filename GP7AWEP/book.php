@@ -101,6 +101,7 @@
                                         <input type='text' id='si5' name='studentid5' value='$si5'><br><br>";
                                     echo 
                                     '
+                                    <h2> Are You Sure? </h2>
                                         <input type="submit" name="submiter" value="confirm" id="sbutton">
                                     </form>
                                     ';
@@ -126,6 +127,7 @@
                                     <input type='text' id='si4' name='studentid4' value='$si4'><br><br>";
                                     echo 
                                     '
+                                    <h2> Are You Sure? </h2>
                                         <input type="submit" name="submiter" value="submit" id="sbutton">
                                     </form>
                                     ';
