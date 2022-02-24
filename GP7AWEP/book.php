@@ -49,79 +49,170 @@
             </div>
             <div id="formwrapper">
             <?php
-                if(isset($_POST['snumset'])) {
-                    
-                } else { //sheeesh allows to get opposite of isset aka isnotset
-                    echo 
-                    '<form method="post" action="book.php">
-                        <h3>How many student?</h3>
-                        <select name="studentno" id="snum">
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <input type="submit" name="snumset" value="set">
-                    </form>';
+                if(isset($_POST['notsnumset'])) {
+
+                } else {
+                    if(isset($_POST['snumset'])) {
+                        
+                    } else { //sheeesh allows to get opposite of isset aka isnotset
+                        echo 
+                        '<form method="post" action="book.php">
+                            <h3>How many student?</h3>
+                            <select name="studentno" id="snum">
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <input type="submit" name="snumset" value="set">
+                        </form>';
+                    }
                 }
             ?>
                 
 
                     <?php
-                        if(isset($_POST['snumset'])) {
-                            $studentno = $_POST['studentno'];
-                            echo 
-                            '<form method="post" action="book.php">
-                                <input type="submit" value="Back">
-                            </form>'; #ayy first try cheese
-                            // line 56 - 58 refreshes the page, allow to change no of student id
-
-                            echo '<form method="post" action="confirmation.php">';
-                            echo "<h3>Please fill in your student ids</h3>";
-
-                            //show the amount of student id based of the chosen value
-                            switch ($studentno) { 
-                                case '3':
-                                    echo "<label for='si1'>Student id 1: </label>";
-                                    echo "<input type='text' id='si1' name='studentid1'><br><br>";
-                                    echo "<label for='si2'>Student id 2: </label>";
-                                    echo "<input type='text' id='si2' name='studentid2'><br><br>";
-                                    echo "<label for='si3'>Student id 3: </label>";
-                                    echo "<input type='text' id='si3' name='studentid3'><br><br>";
-                                    break;
-
-                                case '4':
-                                    echo "<label for='si1'>Student id 1: </label>";
-                                    echo "<input type='text' id='si' name='studentid1'><br><br>";
-                                    echo "<label for='si'>Student id 2: </label>";
-                                    echo "<input type='text' id='si1' name='studentid2'><br><br>";
-                                    echo "<label for='si2'>Student id 3: </label>";
-                                    echo "<input type='text' id='si3' name='studentid3'><br><br>";
-                                    echo "<label for='si4'>Student id 4: </label>";
-                                    echo "<input type='text' id='si4' name='studentid4'><br><br>";
-                                    break;
-
-                                case '5':
-                                    echo "<label for='si1'>Student id 1: </label>";
-                                    echo "<input type='text' id='si1' name='studentid1'><br><br>";
-                                    echo "<label for='si2'>Student id 2: </label>";
-                                    echo "<input type='text' id='si2' name='studentid2'><br><br>";
-                                    echo "<label for='si3'>Student id 3: </label>";
-                                    echo "<input type='text' id='si3' name='studentid3'><br><br>";
-                                    echo "<label for='si4'>Student id 4: </label>";
-                                    echo "<input type='text' id='si4' name='studentid4'><br><br>";
-                                    echo "<label for='si5'>Student id 5: </label>";
-                                    echo "<input type='text' id='si5' name='studentid5'><br><br>";
-                                    break;
+                        if(isset($_POST['notsnumset'])) {
+                            echo '
+                                <form method="post" action="book.php">
+                                    <input type="submit" value="Back">
+                                </form> 
+                            ';
+                            
+                            if(isset($_POST['studentid5'])) {
+                                $si1 = $_POST['studentid1'];
+                                $si2 = $_POST['studentid2'];
+                                $si3 = $_POST['studentid3'];
+                                $si4 = $_POST['studentid4'];
+                                $si5 = $_POST['studentid5'];
+                                if (empty($si1)|empty($si2)|empty($si3)|empty($si4)|empty($si5)) {
+                                    echo "field must not be empty";
+                                } else {
+                                    echo '<form action="confirmation.php" method="post">';
+                                        echo "<label for='si1'>Student id 1: </label>";
+                                        echo "<input type='text' id='si1' name='studentid1' value='$si1'><br><br>";
+                                        echo "<label for='si2'>Student id 2: </label>";
+                                        echo "<input type='text' id='si2' name='studentid2' value='$si2'><br><br>";
+                                        echo "<label for='si3'>Student id 3: </label>";
+                                        echo "<input type='text' id='si3' name='studentid3' value='$si3'><br><br>";
+                                        echo "<label for='si4'>Student id 4: </label>";
+                                        echo "<input type='text' id='si4' name='studentid4' value='$si4'><br><br>";
+                                        echo "<label for='si5'>Student id 5: </label>";
+                                        echo "<input type='text' id='si5' name='studentid5' value='$si5'><br><br>";
+                                    echo 
+                                    '
+                                        <input type="submit" name="submiter" value="confirm" id="sbutton">
+                                    </form>
+                                    ';
+                                }
                                 
-                                default:
-                                    break;
+                                
+                            } else if(isset($_POST['studentid4'])) {
+                                $si1 = $_POST['studentid1'];
+                                $si2 = $_POST['studentid2'];
+                                $si3 = $_POST['studentid3'];
+                                $si4 = $_POST['studentid4'];
+                                if (empty($si1)|empty($si2)|empty($si3)|empty($si4)) {
+                                    echo "field must not be empty";
+                                } else {
+                                    echo '<form action="confirmation.php" method="post">';
+                                    echo "<label for='si1'>Student id 1: </label>";
+                                        echo "<input type='text' id='si1' name='studentid1' value='$si1'><br><br>";
+                                        echo "<label for='si2'>Student id 2: </label>";
+                                        echo "<input type='text' id='si2' name='studentid2' value='$si2'><br><br>";
+                                        echo "<label for='si3'>Student id 3: </label>";
+                                        echo "<input type='text' id='si3' name='studentid3' value='$si3'><br><br>";
+                                        echo "<label for='si4'>Student id 4: </label>";
+                                        echo "<input type='text' id='si4' name='studentid4' value='$si4'><br><br>";
+                                    echo 
+                                    '
+                                        <input type="submit" name="submiter" value="submit" id="sbutton">
+                                    </form>
+                                    ';
+                                }
+                                
+                            } else if(isset($_POST['studentid3'])) {
+                                $si1 = $_POST['studentid1'];
+                                $si2 = $_POST['studentid2'];
+                                $si3 = $_POST['studentid3'];
+                                if (empty($si1)|empty($si2)|empty($si3)) {
+                                    echo "field must not be empty";
+                                } else {
+                                    echo '<form action="confirmation.php" method="post">';
+                                    echo "<label for='si1'>Student id 1: </label>";
+                                        echo "<input type='text' id='si1' name='studentid1' value='$si1'><br><br>";
+                                        echo "<label for='si2'>Student id 2: </label>";
+                                        echo "<input type='text' id='si2' name='studentid2' value='$si2'><br><br>";
+                                        echo "<label for='si3'>Student id 3: </label>";
+                                        echo "<input type='text' id='si3' name='studentid3' value='$si3'><br><br>";
+                                    echo 
+                                    '
+                                    <h2> Are You Sure? </h2>
+                                        <input type="submit" name="submiter" value="Confirm" id="sbutton">
+                                    </form>
+                                    ';
+                                }
+                                
                             }
 
-                            echo '<input type="submit" name="snumset" value="submit" id="sbutton">';
-                            echo '</form>';
+                        } else {
+                            if(isset($_POST['snumset'])) {
+                                echo 
+                                '<form method="post" action="book.php">
+                                    <input type="submit" value="Back">
+                                </form>'; #ayy first try cheese
+                                // line 56 - 58 refreshes the page, allow to change no of student id
+
+                                echo '<form method="post" action="book.php">';
+                                echo "<h3>Please fill in your student ids</h3>";
+
+                                //show the amount of student id based of the chosen value
+                                $studentno = $_POST['studentno'];
+                                switch ($studentno) { 
+                                    case '3':
+                                        echo "<label for='si1'>Student id 1: </label>";
+                                        echo "<input type='text' id='si1' name='studentid1'><br><br>";
+                                        echo "<label for='si2'>Student id 2: </label>";
+                                        echo "<input type='text' id='si2' name='studentid2'><br><br>";
+                                        echo "<label for='si3'>Student id 3: </label>";
+                                        echo "<input type='text' id='si3' name='studentid3'><br><br>";
+                                        break;
+
+                                    case '4':
+                                        echo "<label for='si1'>Student id 1: </label>";
+                                        echo "<input type='text' id='si' name='studentid1'><br><br>";
+                                        echo "<label for='si'>Student id 2: </label>";
+                                        echo "<input type='text' id='si1' name='studentid2'><br><br>";
+                                        echo "<label for='si2'>Student id 3: </label>";
+                                        echo "<input type='text' id='si3' name='studentid3'><br><br>";
+                                        echo "<label for='si4'>Student id 4: </label>";
+                                        echo "<input type='text' id='si4' name='studentid4'><br><br>";
+                                        break;
+
+                                    case '5':
+                                        echo "<label for='si1'>Student id 1: </label>";
+                                        echo "<input type='text' id='si1' name='studentid1'><br><br>";
+                                        echo "<label for='si2'>Student id 2: </label>";
+                                        echo "<input type='text' id='si2' name='studentid2'><br><br>";
+                                        echo "<label for='si3'>Student id 3: </label>";
+                                        echo "<input type='text' id='si3' name='studentid3'><br><br>";
+                                        echo "<label for='si4'>Student id 4: </label>";
+                                        echo "<input type='text' id='si4' name='studentid4'><br><br>";
+                                        echo "<label for='si5'>Student id 5: </label>";
+                                        echo "<input type='text' id='si5' name='studentid5'><br><br>";
+                                        break;
+                                    
+                                    default:
+                                        break;
+                                }
+
+                                
+                                echo '<input type="submit" name="notsnumset" value="submit" id="sbutton">';
+                                echo '</form>';
+                                
+                            }
                         }
                     ?>
-
+                    
                 
             </div>
         </div>

@@ -29,6 +29,26 @@
                         <h3>$studentid4</h3>
                         <h3>$studentid5</h3>
                     ";
+                } else if(isset($_POST['studentid4'])) {
+                    $studentid1 = $_POST['studentid1'];
+                    $studentid2 = $_POST['studentid2'];
+                    $studentid3 = $_POST['studentid3'];
+                    $studentid4 = $_POST['studentid4'];
+                    echo "
+                        <h3>$studentid1</h3>
+                        <h3>$studentid2</h3>
+                        <h3>$studentid3</h3>
+                        <h3>$studentid4</h3>
+                    ";
+                } else if(isset($_POST['studentid3'])) {
+                    $studentid1 = $_POST['studentid1'];
+                    $studentid2 = $_POST['studentid2'];
+                    $studentid3 = $_POST['studentid3'];
+                    echo "
+                        <h3>$studentid1</h3>
+                        <h3>$studentid2</h3>
+                        <h3>$studentid3</h3>
+                    ";
                 }
             ?>
             <a href="index.php"><button type="button">Homepage</button></a>
