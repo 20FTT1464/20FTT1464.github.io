@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,7 +24,7 @@
                 background-color: #e35760;
                 border: solid 5px #bd0d22;
                 border-radius: 10px;
-                margin-top: 18%;
+                margin-top: 10%;
                 color: white;
                 font-size: 1.2em;
             }
@@ -32,19 +36,23 @@
         <div class="container">
             <div style="margin: auto;">
                 <?php
+                    
                     if(isset($_POST['submitone'])) {
-                        echo '<h1>Room 1</h1>';
+                        $_SESSION['room'] = '<h1>Room 1</h1>';
                     } else if(isset($_POST['submittwo'])) {
-                        echo '<h1>Room 2</h1>';                                                       
+                        $_SESSION['room'] = '<h1>Room 2</h1>';                                                     
                     } else if(isset($_POST['submitthree'])) {
-                        echo '<h1>Room 3</h1>';               
+                        $_SESSION['room'] = '<h1>Room 3</h1>';               
                     } else if(isset($_POST['submitfour'])) {
-                        echo '<h1>Room 4</h1>';             
+                        $_SESSION['room'] = '<h1>Room 4</h1>';             
                     } else if(isset($_POST['submitfive'])) {
-                        echo '<h1>Room 5</h1>';              
+                        $_SESSION['room'] = '<h1>Room 6</h1>'; 
                     } else if(isset($_POST['submitsix'])) {
-                        echo '<h1>Room 6</h1>';             
+                        $_SESSION['room'] = '<h1>Room 6</h1>';             
                     }
+                    
+                    echo $_SESSION['room'];
+                    
                 ?>
             </div>
             <div id="formwrapper">
@@ -166,38 +174,18 @@
 
                                 //show the amount of student id based of the chosen value
                                 $studentno = $_POST['studentno'];
-                                $student123 = "<label for='si1'>Student id 1: </label>
-                                <input type='text' id='si1' name='studentid1'><br><br>
-                                <label for='si2'>Student id 2: </label>
-                                <input type='text' id='si2' name='studentid2'><br><br>
-                                <label for='si3'>Student id 3: </label>
-                                <input type='text' id='si3' name='studentid3'><br><br>";
-                                switch ($studentno) { 
-                                    case '3':
-                                        echo $student123;
-                                        break;
-
-                                    case '4':
-                                        echo $student123;
-                                        echo "<label for='si4'>Student id 4: </label>
-                                        <input type='text' id='si4' name='studentid4'><br><br>";
-                                        break;
-
-                                    case '5':
-                                        echo $student123;
-                                        echo "<label for='si4'>Student id 4: </label>
-                                        <input type='text' id='si4' name='studentid4'><br><br>
-                                        <label for='si5'>Student id 5: </label>
-                                        <input type='text' id='si5' name='studentid5'><br><br>";
-                                        break;
-                                    
-                                    default:
-                                        break;
+                                $sn = $studentno + 1;
+                                for ($i=1; $i < $sn; $i++) { 
+                                    echo "
+                                    <label for='si$i'>Student id $i: </label>
+                                    <input type='text' id='si$i' name='studentid$i'><br><br>
+                                    ";
                                 }
-
                                 
-                                echo '<input type="submit" name="notsnumset" value="submit" id="sbutton">';
-                                echo '</form>';
+                                echo '
+                                <input type="submit" name="notsnumset" value="submit" id="sbutton">
+                                </form>
+                                ';
                                 
                             }
                         }
