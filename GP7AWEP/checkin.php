@@ -202,9 +202,8 @@
                 }
             ?>
             
-            <input type="submit" name="Submit"
-                        class="button" value="submit" />
-                        </form>
+            <input type="submit" name="Submit"class="button" value="submit" />
+            </form>
         </div>
     </div>
 </body>
