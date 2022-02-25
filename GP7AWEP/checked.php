@@ -12,7 +12,7 @@
 <div class="top-container">&nbsp</div> 
         <div class="container">
 <h1>
-    YOU HAVE CHECKED IN
+    YOU HAVE CHECKED IN <br>
     <?php $bil_number = $_POST['radio'];
     echo $bil_number ;
     ?> 
