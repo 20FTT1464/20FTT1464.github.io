@@ -179,7 +179,7 @@
             
             <?php
                 for ($i=0; $i < count($Bookers); $i++) { 
-                    $i = $i+1;
+                    $y = $i+1;
                     echo '<table border=1 width=900>';
                     foreach($Bookers[$i] as $label => $value) {
                         echo "
@@ -192,7 +192,7 @@
                     echo'
                     <tr>
                         <th>select</th>
-                        <td><input type="radio" name="radio" value="bill number ' . $i . '"></td>
+                        <td><input type="radio" name="radio" value="bill number ' . $y . '"></td>
                     </tr>
                     <br>
                     </table>
