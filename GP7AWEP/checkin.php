@@ -150,17 +150,18 @@
     
     
     ?>
-    <table border="1" width="900">
-
-         <tr>
-            <td>No.</td>
-            <td>ID</td>
-            <td>Room</td>
-            <td>Booked Time</td>
-            <td>Select</td>
-        </tr>
+    
     <?php
         for ($i=0; $i < count($Bookers); $i++) { 
+            echo '<table border="1" width="900">
+
+            <tr>
+               <th>No.</th>';
+            echo '<th>ID</th>';
+            echo '<th>Room</th>
+               <th>Booked Time</th>
+               <th>Select</th>
+           </tr>';
             echo '<tr>';
             foreach($Bookers[$i] as $bnum => $value) {
                 echo "<td>$value</td>";
