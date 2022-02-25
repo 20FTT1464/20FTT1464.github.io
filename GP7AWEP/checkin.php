@@ -2,9 +2,21 @@
 <html>
 <head>
     <link rel="stylesheet" href="assets/css/base.css"></link>
+    <style>
+        table{
+            margin: auto;
+        }
+        .container{
+            overflow: scroll;
+        }
+
+    </style>
+
 </head>
 <body>
+
     <link rel="stylesheet" href="assets/css/base.css"></link>
+    
     <div class="top-container">&nbsp</div> 
         <div class="container">
             
@@ -163,14 +175,15 @@
             
             
             ?>
+            <form action="checked.php" method="post">
             
             <?php
                 for ($i=0; $i < count($Bookers); $i++) { 
                     echo '<table border=1 width=900>';
-                    foreach($Bookers[$i] as $bnum => $value) {
+                    foreach($Bookers[$i] as $label => $value) {
                         echo "
                         <tr>
-                            <th>$bnum</th>
+                            <th>$label</th>
                             <td>$value</td>
                         </tr>
                         ";
@@ -178,16 +191,17 @@
                     echo'
                     <tr>
                         <th>select</th>
-                        <td><input type="radio" name="radio" value="radio' . $i . '"></td>
+                        <td><input type="radio" name="radio" value="bill number' . +$i . '"></td>
                     </tr>
                     <br>
                     </table>
                     ';
                 }
-            ?>
+            
             
             <input type="submit" name="Submit"
                         class="button" value="submit" />
+                        </form>
         </div>
     </div>
 </body>
