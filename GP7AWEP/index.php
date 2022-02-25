@@ -11,7 +11,7 @@
             <br>
             <a href="./choose-room.php"><button type="button">Choose Room</button></a>
             <br>
-            <button type="button">Check In</button>
+            <a href="./checkin.php"><button type="button">Check In</button></a>
             <div>
                 Please start by choosing rooms
             </div>
