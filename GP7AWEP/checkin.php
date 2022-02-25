@@ -12,61 +12,64 @@
     $Bookers = array(
         array(
             'room'=>'1',
-            'time'=>"1.30pm-2.30pm",
+            'time'=>'1.30pm-2.30pm',
+            'no_people'=>'3',
+            'id'=>'19FTT1199',
+            'id'=>'19FTT1199',
             'id'=>'19FTT1199',
 
         ),
         array(
             'room'=>'2',
-            'time'=>"1.30pm-2.30pm",
+            'time'=>'1.30pm-2.30pm',
             'id'=>'19FTT2932',
 
         ),
         array(
             'room'=>'3',
-            'time'=>"1.30pm-2.30pm",
+            'time'=>'1.30pm-2.30pm',
             'id'=>'19FTT3939',
 
         ),
         array(
             'room'=>'4',
-            'time'=>"1.30pm-2.30pm",
+            'time'=>'1.30pm-2.30pm',
             'id'=>'19FTT4034',
 
         ),
         array(
             'room'=>'5',
-            'time'=>"1.30pm-2.30pm",
+            'time'=>'1.30pm-2.30pm',
             'id'=>'19FTT6903',
 
         ),
         array(
             'room'=>'6',
-            'time'=>"1.30pm-2.30pm",
+            'time'=>'1.30pm-2.30pm',
             'id'=>'19FTT3023',
 
         ),
         array(
             'room'=>'1',
-            'time'=>"2.30pm-3.30pm",
+            'time'=>'2.30pm-3.30pm',
             'id'=>'20FTT4409',
 
         ),
         array(
             'room'=>'2',
-            'time'=>"2.30pm-3.30pm",
+            'time'=>'2.30pm-3.30pm',
             'id'=>'20FTT3922',
 
         ),
         array(
             'room'=>'3',
-            'time'=>"2.30pm-3.30pm",
+            'time'=>'2.30pm-3.30pm',
             'id'=>'20FTT9323',
 
         ),
         array(
             'room'=>'4',
-            'time'=>"2.30pm-3.30pm",
+            'time'=>'2.30pm-3.30pm',
             'id'=>'20FTT0232',
 
         ),
