@@ -90,7 +90,9 @@
     echo '<pre>';
     // print_r($Bookers);
     // echo $Bookers[1]['firstname'];
-
+    
+    
+        
     
     
     ?>
@@ -103,93 +105,17 @@
             <td>Booked Time</td>
             <td>Select</td>
         </tr>
-
-        <tr>
-            <td>1</td>
-            <td><?php echo $Bookers[0]['id'];?></td>
-            <td><?php echo $Bookers[0]['room'];?></td>
-            <td><?php echo $Bookers[0]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td><?php echo $Bookers[1]['id'];?></td>
-            <td><?php echo $Bookers[1]['room'];?></td>
-            <td><?php echo $Bookers[1]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td><?php echo $Bookers[2]['id'];?></td>
-            <td><?php echo $Bookers[2]['room'];?></td>
-            <td><?php echo $Bookers[2]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td><?php echo $Bookers[3]['id'];?></td>
-            <td><?php echo $Bookers[3]['room'];?></td>
-            <td><?php echo $Bookers[3]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td><?php echo $Bookers[4]['id'];?></td>
-            <td><?php echo $Bookers[4]['room'];?></td>
-            <td><?php echo $Bookers[4]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td><?php echo $Bookers[5]['id'];?></td>
-            <td><?php echo $Bookers[5]['room'];?></td>
-            <td><?php echo $Bookers[5]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td><?php echo $Bookers[6]['id'];?></td>
-            <td><?php echo $Bookers[6]['room'];?></td>
-            <td><?php echo $Bookers[6]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td><?php echo $Bookers[7]['id'];?></td>
-            <td><?php echo $Bookers[7]['room'];?></td>
-            <td><?php echo $Bookers[7]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td><?php echo $Bookers[8]['id'];?></td>
-            <td><?php echo $Bookers[8]['room'];?></td>
-            <td><?php echo $Bookers[8]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td><?php echo $Bookers[9]['id'];?></td>
-            <td><?php echo $Bookers[9]['room'];?></td>
-            <td><?php echo $Bookers[9]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td><?php echo $Bookers[10]['id'];?></td>
-            <td><?php echo $Bookers[10]['room'];?></td>
-            <td><?php echo $Bookers[10]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td><?php echo $Bookers[11]['id'];?></td>
-            <td><?php echo $Bookers[11]['room'];?></td>
-            <td><?php echo $Bookers[11]['time'];?></td>
-            <td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>
-        </tr>
-        
-
+    <?php
+        for ($i=0; $i < count($Bookers); $i++) { 
+            echo '<tr>';
+            foreach($Bookers[$i] as $bnum => $value) {
+                echo "<td>$value</td>";
+            }
+            echo'<td><input type="checkbox" name="checkbox_name" value="checkox_value"></td>';
+            echo '</tr>';
+        }
+    ?>
+    
     </table>
     <input type="submit" name="Submit"
                 class="button" value="submit" />
