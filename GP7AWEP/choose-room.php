@@ -36,8 +36,9 @@
         // $date = date('l jS ');
         // $hour = date("h");
         // $min = date("i");
-        //    echo "<h1> Today date is " date('l jS \of F Y h:i:s A') " .</h1>"; 
-        echo date('l jS \of F Y h:i:s A');
+        // echo "<h1> Today date is " date('l jS \of F Y h:i:s A') " .</h1>";
+        echo date('l jS \of F Y h:i:s A'); //https://www.php.net/manual/en/function.date.php
+        // date above shows date time minute seconds.
         ?>
             <div class="flexrow">
                 <div class="flexcol">
@@ -58,11 +59,15 @@
                     <label for="">2.30pm-3.30pm</label> -->
                     
                     <?php
-                     $hour = date("h");
-                     $min = date("i");
+                     $hour = date("h"); // hours
+                     $min = date("i"); // minute
                     // $hour = 7;
                     // $min = 30;
-                    // id name according to radio eg roo = radio one one. 
+                    // there is 6 if else statement for each room.
+                    // each if is for each hour past. eg, if it is 7 oclock in the morning
+                    // the student can book for room that are available on 8am onwards
+                    // but if it is 9am, the code will automatically print time after 9am.
+                    // id name according to radio eg roo = radio one one.
                         if($hour < 8){
                            echo '
                            <input type="radio" id="roo" name="radio_one" value="8am-9am">
