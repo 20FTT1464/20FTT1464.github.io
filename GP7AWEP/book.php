@@ -61,9 +61,9 @@
 
                 } else {
                     if(isset($_POST['snumset'])) {
-                        
+                        //if the student number is set then the dropdown disappear
                     } else { //sheeesh allows to get opposite of isset aka isnotset
-                        echo 
+                        echo //if no of student is not set yet, the dropdown to set it will show
                         '<form method="post" action="book.php">
                             <h3>How many student?</h3>
                             <select name="studentno" id="snum">
@@ -93,9 +93,9 @@
                                 $si3 = $_POST['studentid3'];
                                 $si4 = $_POST['studentid4'];
                                 $si5 = $_POST['studentid5'];
-                                if (empty($si1)|empty($si2)|empty($si3)|empty($si4)|empty($si5)) {
+                                if (empty($si1)|empty($si2)|empty($si3)|empty($si4)|empty($si5)) { // if any of the field is empty then activate this echo
                                     echo "field must not be empty";
-                                } else {
+                                } else {// instead of this
                                     echo '<form action="confirmation.php" method="post">';
                                         echo "<label for='si1'>Student id 1: </label>
                                         <input type='text' id='si1' name='studentid1' value='$si1'><br><br>
@@ -174,8 +174,10 @@
 
                                 //show the amount of student id based of the chosen value
                                 $studentno = $_POST['studentno'];
-                                $sn = $studentno + 1;
-                                for ($i=1; $i < $sn; $i++) { 
+                                $sn = $studentno + 1; // since "<" doesnt "<="
+                                // example of studentnp = 5; the output below show 4. solution? +1
+
+                                for ($i=1; $i < $sn; $i++) { //automatic
                                     echo "
                                     <label for='si$i'>Student id $i: </label>
                                     <input type='text' id='si$i' name='studentid$i'><br><br>
